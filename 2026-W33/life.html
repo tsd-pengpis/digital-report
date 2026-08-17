@@ -1,101 +1,137 @@
 <!DOCTYPE html><html lang="th"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>รายงานเต็ม THE STANDARD LIFE · 2026-W33</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<title>THE STANDARD LIFE · รายงานประจำสัปดาห์ 2026-W33</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#f3f6fb;font-family:'Noto Sans Thai',sans-serif;color:#172238;line-height:1.6;padding:0 0 60px}
-.topbar{background:#B52D4A;color:#fff;text-align:center;font-size:12px;padding:6px}
-.topbar b{font-weight:700}
-.container{max-width:980px;margin:0 auto;padding:0 18px}
-.house{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(23,34,56,.08);margin:26px 0}
-.hero{display:flex;align-items:center;gap:14px;padding:26px 28px;color:#fff}
-.logo{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;flex-shrink:0}
-.brand-copy h1{font-size:22px;line-height:1.3}
-.brand-copy p{font-size:12px;opacity:.85;margin-top:3px}
-.hero-chip{margin-left:auto;background:rgba(0,0,0,.28);padding:5px 14px;border-radius:20px;font-size:12px;flex-shrink:0}
-.exec{padding:22px 28px 6px}
-.headline{font-size:17px;font-weight:700;margin-bottom:16px}
-.twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.col h3{font-size:13px;color:#6a788f;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
-.insight{display:flex;flex-direction:column;background:#f3f6fb;border-radius:10px;padding:10px 13px;margin-bottom:8px;font-size:13px}
-.insight b{font-size:13px}
-.insight span{color:#6a788f;font-size:12px;margin-top:2px}
-.insight.green b{color:#0f6f42}
-.insight.red b{color:#CC0000}
-.insight.blue b{color:#3c7cff}
-.strat{display:flex;gap:9px;padding:7px 0;font-size:13px}
-.strat .dot{width:20px;height:20px;border-radius:50%;background:#172238;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:2px}
-.strat span{color:#6a788f;font-size:12px;display:block;margin-top:1px}
-.crit{background:#fdf3d7;border:1px solid #e8d089;color:#6b4e00;border-radius:10px;padding:10px 13px;font-size:12px;margin-top:8px}
-.tally{display:flex;align-items:center;gap:14px;background:#e8f7ef;border-radius:10px;padding:12px 16px;margin-top:16px;font-size:14px}
-.tally b{color:#0f6f42}
-.tally span{color:#6a788f;font-size:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px 28px 26px}
-.pcard{border:1px solid #dfe6f0;border-radius:12px;overflow:hidden}
-.phead{display:flex;align-items:center;gap:8px;padding:12px 14px;background:#f8fbff;border-bottom:1px solid #dfe6f0;font-size:13px}
-.pname{font-weight:700}
-.chip{font-size:11px;font-weight:700;padding:2px 10px;border-radius:12px}
-.prank{margin-left:auto;color:#6a788f;font-size:11px}
-.lrow{display:flex;align-items:center;gap:8px;padding:6px 14px;font-size:13px;border-bottom:1px solid #f0f3f8}
-.lrow:last-child{border-bottom:0}
-.lrow.us{background:#edf4ff}
-.rank{width:26px;color:#6a788f;font-size:12px;font-weight:700;flex-shrink:0}
-.avatar{width:24px;height:24px;border-radius:7px;background:#1f2d44;color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.nm{flex:0 0 42%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}
-.bar{flex:1;height:8px;background:#eef2f8;border-radius:4px;overflow:hidden}
-.fill{height:100%;border-radius:4px}
-.val{font-weight:700;font-size:12px;flex-shrink:0;text-align:right;min-width:52px}
-.note{padding:14px;color:#6a788f;font-size:12px}
-.method{background:#fff;border-radius:16px;padding:22px 28px;margin:26px 0;font-size:12.5px}
-.method h2{font-size:15px;margin-bottom:10px}
-.method p{color:#6a788f;margin-bottom:6px}
-.method b{color:#172238}
-.vlinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:12px}
-.vlinks span{color:#6a788f}
-.vlinks a{background:#fff;border:1px solid #d6dbe1;border-radius:14px;padding:4px 12px;
-  color:#146c2e;text-decoration:none;font-weight:600;font-size:11.5px}
-@media (max-width:720px){
-  .container{padding:0 10px}
-  .hero{flex-wrap:wrap;padding:18px 16px}
-  .hero-chip{margin-left:0}
-  .logo{width:44px;height:44px;font-size:19px}
-  .brand-copy h1{font-size:17px}
-  .exec{padding:16px 14px 4px}
-  .twocol{grid-template-columns:1fr;gap:10px}
-  .grid{grid-template-columns:1fr;padding:10px 14px 18px}
-  .lrow{padding:6px 10px}
-  .nm{flex-basis:36%}
-  .method{padding:16px 14px}
-  .tally{flex-direction:column;align-items:flex-start;gap:4px}
-}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans Thai',sans-serif;
+     color:#1f2328;line-height:1.55;background:
+     linear-gradient(180deg,#e8e8e8 0%,#f6f6f6 340px,#f2f4f7 900px)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px 48px}
+.masthead{background:linear-gradient(120deg,#16181c,#68696b);
+  border-radius:0 0 22px 22px;padding:30px 28px 26px;color:#ffffff;
+  display:flex;align-items:center;gap:20px;box-shadow:0 6px 24px #969799}
+.masthead img.logo{width:74px;height:74px;border-radius:18px;background:#fff;
+  padding:8px;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.masthead h1{font-size:1.65em;letter-spacing:.01em}
+.masthead .sub{opacity:.92;font-size:.92em;margin-top:4px}
+.masthead .week{margin-left:auto;text-align:right;font-size:.8em;opacity:.95}
+.masthead .week b{display:block;font-size:1.7em}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+nav a{text-decoration:none;font-size:.78em;font-weight:700;padding:7px 13px;
+  border-radius:999px;background:#fff;color:#46505a;border:1px solid #d6dbe1}
+nav a.cur{background:#16181c;color:#ffffff;border-color:transparent}
+.card{background:#fff;border-radius:16px;margin-top:18px;overflow:hidden;
+  box-shadow:0 2px 12px rgba(16,24,40,.08);border-top:4px solid #16181c}
+.card-hd{display:flex;align-items:center;gap:10px;padding:12px 18px;color:#fff}
+.card-hd img{width:20px;height:20px}
+.card-hd span{font-weight:800}
+.card-hd .card-metric{margin-left:auto;font-size:.74em;font-weight:600;opacity:.92;text-align:right}
+.stats{display:flex;flex-wrap:wrap;gap:10px;padding:14px 18px 4px}
+.stat{flex:1;min-width:118px;background:#efefef;
+  border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.stat .v{font-size:1.25em;font-weight:800;font-variant-numeric:tabular-nums}
+.stat .v.up{color:#146c2e} .stat .v.down{color:#b3261e}
+.stat .l{font-size:.68em;color:#66707a;margin-top:2px}
+.approx{opacity:.6}
+table{width:100%;border-collapse:collapse;font-size:.86em}
+th,td{text-align:left;padding:7px 12px;border-bottom:1px solid #e9edf1}
+th{background:#eceded;font-size:.85em;color:#3d4750}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.us{background:#fff8e6;font-weight:800}
+tr.us td:first-child::after{content:' ★';color:#16181c;font-size:.8em}
+.scroll{overflow-x:auto}
+.note{font-size:.76em;color:#7b858f;padding:8px 18px 14px}
+.hero-img{width:100%;aspect-ratio:20/13;object-fit:cover;display:block;
+  border-radius:16px 16px 0 0;margin-top:18px}
+.pchip{color:#fff;font-size:.72em;font-weight:700;padding:2px 9px;border-radius:999px}
+footer{text-align:center;color:#8a939d;font-size:.76em;margin-top:26px}
+footer a{color:#16181c;font-weight:700;text-decoration:none}
 </style></head><body>
-<div class="topbar">🔒 <b>รายงานเต็ม LIFE</b> · ข้อมูลภายใน THE STANDARD · ห้ามเผยแพร่ภายนอก</div>
-<div class="container">
-<div class="house" id="life">
-  <div class="hero" style="background:linear-gradient(120deg,#16181c,#16181ccc)">
-    <div class="logo">L</div>
-    <div class="brand-copy">
-      <h1>THE STANDARD LIFE</h1>
-      <p>สัปดาห์ 2026-W33 · 6-12 ส.ค. 2026 · 4 Platforms · เทียบ Comp Set รายสัปดาห์</p>
-    </div>
-    <div class="hero-chip">2026-W33</div>
+<div class="wrap">
+<div class="masthead">
+  <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/life.png" alt="THE STANDARD LIFE">
+  <div><h1>THE STANDARD LIFE</h1>
+    <div class="sub">รายงานดิจิทัลประจำสัปดาห์ · 6-12 ส.ค. 2026</div></div>
+  <div class="week"><b>2026-W33</b>อัปเดตทุกสัปดาห์</div>
+</div>
+<nav><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W33/news.html">NEWS</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W33/wealth.html">WEALTH</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W33/pop.html">POP</a><a class="cur" href="https://tsd-pengpis.github.io/digital-report/2026-W33/life.html">LIFE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W33/sport.html">SPORT</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W33/knd.html">KND</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W33/tss.html">SECRET SAUCE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W33/podcast.html">PODCAST</a></nav>
+<img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W33/img/life.jpg" alt="">
+
+<div class="card">
+  <div class="card-hd" style="background:#1877F2">
+    <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""><span>Facebook</span>
+    <span class="card-metric">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</span>
   </div>
-  <div class="exec">
-    <p class="headline">Instagram แข็งแกร่งที่สุด อันดับ 2 จาก 7 เพจ — โจทย์คือดัน YouTube กลับหัวตาราง</p>
-    <div class="twocol">
-      <div class="col"><h3>สัปดาห์นี้ เปลี่ยนอะไร</h3><div class="insight green"><b>Instagram เป็นฐาน</b><span>อันดับ 2 จาก 7 (1.4K) — สนามที่เรายืนเหนือกลุ่ม</span></div><div class="insight red"><b>YouTube ยังตามอยู่</b><span>อันดับ 6 จาก 6 — อีก 20 ก็แซง The Longevist ได้</span></div><div class="insight blue"><b>TikTok แอบมีแรงส่ง</b><span>อันดับ 2 จาก 4 — ใกล้หัวตารางกว่าที่คิด เติมต่อเนื่องมีสิทธิ์ติด Top 3</span></div></div>
-      <div class="col"><h3>โจทย์ของสัปดาห์หน้า</h3><div class="strat"><span class="dot"></span><div><b>ดัน YouTube ให้ขยับ</b><span>อีก 20 ก็แซง The Longevist ได้ — วางจังหวะโพสต์ตอนคู่แข่งแผ่ว</span></div></div><div class="strat"><span class="dot"></span><div><b>รักษาแกน Instagram</b><span>อันดับ 2 จาก 7 — อย่าให้ร่วง เพราะช่องอื่นยังพึ่งสนามนี้</span></div></div><div class="strat"><span class="dot"></span><div><b>เติมคอนเทนต์ที่ติดชาร์ต</b><span>สัปดาห์นี้ติดชาร์ตแค่ 7 ชิ้น — เพิ่มโพสต์ที่ทำ engagement ได้จริง</span></div></div><div class="crit"><b>เกณฑ์พิสูจน์ในสัปดาห์หน้า:</b> YouTube ขยับจาก #6 ขึ้นเป็นอย่างน้อย #5 และ Instagram ต้องไม่หลุด Top 3</div></div>
-    </div>
-    <div class="tally"><b>ติด Top 3: 2 จาก 4 สนาม</b><span>เทียบ 4 บล็อก comp set ของ LIFE</span></div>
-    <div class="vlinks"><span>ดูการ์ด:</span><a href="https://tsd-pengpis.github.io/digital-report/preview/line-iphone-mockup.html#house-life">V1</a><a href="https://tsd-pengpis.github.io/digital-report/preview/line-iphone-mockup-flex-v2.html#house-life">V2</a><a href="https://tsd-pengpis.github.io/digital-report/preview/flex-payload-preview.html#house-life">payload V1</a><a href="https://tsd-pengpis.github.io/digital-report/preview/flex-payload-preview-flex-v2.html#house-life">payload V2</a></div>
+  <div class="stats">
+    <div class="stat"><div class="v">240,242</div><div class="l">ผู้ติดตาม</div></div>
+    <div class="stat"><div class="v">38</div><div class="l">โพสต์สัปดาห์นี้</div></div>
+    <div class="stat"><div class="v up">+797</div><div class="l">ผู้ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">166,020</div><div class="l">คนเห็น/วัน</div></div>
+    <div class="stat"><div class="v" style="color:#16181c">232</div>
+    <div class="l">RCS/โพสต์</div></div>
   </div>
-  <div class="grid"><div class="pcard"><div class="phead"><span class="pname">Facebook</span><span class="chip" style="background:#fff0ef;color:#CC0000">ท้ายตาราง</span><span class="prank">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</span></div><div class="lrow "><div class="rank">#1</div><div class="avatar">W</div><div class="nm">Wongnai Vibes</div><div class="bar"><div class="fill" style="width:100%;background:#d7e1ef"></div></div><div class="val">1.1K</div></div><div class="lrow "><div class="rank">#2</div><div class="avatar">T</div><div class="nm">The Cloud</div><div class="bar"><div class="fill" style="width:56%;background:#d7e1ef"></div></div><div class="val">623</div></div><div class="lrow "><div class="rank">#3</div><div class="avatar">T</div><div class="nm">Time Out Bangkok</div><div class="bar"><div class="fill" style="width:37%;background:#d7e1ef"></div></div><div class="val">410</div></div><div class="lrow "><div class="rank">#4</div><div class="avatar">M</div><div class="nm">Mirror Thailand</div><div class="bar"><div class="fill" style="width:21%;background:#d7e1ef"></div></div><div class="val">238</div></div><div class="lrow us"><div class="rank">#5</div><div class="avatar">T</div><div class="nm">THE STANDARD LIFE</div><div class="bar"><div class="fill us" style="width:21%;background:#3c7cff"></div></div><div class="val">232</div></div><div class="lrow "><div class="rank">#6</div><div class="avatar">F</div><div class="nm">Friday Bangkok</div><div class="bar"><div class="fill" style="width:5%;background:#d7e1ef"></div></div><div class="val">54</div></div><div class="lrow "><div class="rank">#7</div><div class="avatar">T</div><div class="nm">Tatler Thailand</div><div class="bar"><div class="fill" style="width:4%;background:#d7e1ef"></div></div><div class="val">20</div></div><div class="lrow "><div class="rank">#8</div><div class="avatar">L</div><div class="nm">Lifestyle Asia Thailand</div><div class="bar"><div class="fill" style="width:4%;background:#d7e1ef"></div></div><div class="val">15</div></div><div class="lrow "><div class="rank">#9</div><div class="avatar">K</div><div class="nm">KANT - Luxury  Design  Lifestyle</div><div class="bar"><div class="fill" style="width:4%;background:#d7e1ef"></div></div><div class="val">13</div></div></div><div class="pcard"><div class="phead"><span class="pname">Instagram</span><span class="chip" style="background:#edf4ff;color:#1456C0">Top 3</span><span class="prank">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</span></div><div class="lrow "><div class="rank">#1</div><div class="avatar">M</div><div class="nm">Mirror Thailand</div><div class="bar"><div class="fill" style="width:100%;background:#d7e1ef"></div></div><div class="val">2.0K</div></div><div class="lrow us"><div class="rank">#2</div><div class="avatar">T</div><div class="nm">THE STANDARD LIFE</div><div class="bar"><div class="fill us" style="width:70%;background:#3c7cff"></div></div><div class="val">1.4K</div></div><div class="lrow "><div class="rank">#3</div><div class="avatar">T</div><div class="nm">Time Out Bangkok</div><div class="bar"><div class="fill" style="width:42%;background:#d7e1ef"></div></div><div class="val">834</div></div><div class="lrow "><div class="rank">#4</div><div class="avatar">T</div><div class="nm">The Cloud</div><div class="bar"><div class="fill" style="width:24%;background:#d7e1ef"></div></div><div class="val">467</div></div><div class="lrow "><div class="rank">#5</div><div class="avatar">T</div><div class="nm">Tatler Thailand</div><div class="bar"><div class="fill" style="width:23%;background:#d7e1ef"></div></div><div class="val">458</div></div><div class="lrow "><div class="rank">#6</div><div class="avatar">F</div><div class="nm">Friday</div><div class="bar"><div class="fill" style="width:22%;background:#d7e1ef"></div></div><div class="val">427</div></div><div class="lrow "><div class="rank">#7</div><div class="avatar">W</div><div class="nm">Wongnai Vibes</div><div class="bar"><div class="fill" style="width:9%;background:#d7e1ef"></div></div><div class="val">173</div></div></div><div class="pcard"><div class="phead"><span class="pname">TikTok</span><span class="chip" style="background:#edf4ff;color:#1456C0">Top 3</span><span class="prank">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</span></div><div class="lrow "><div class="rank">#1</div><div class="avatar">T</div><div class="nm">The Cloud Podcast</div><div class="bar"><div class="fill" style="width:100%;background:#d7e1ef"></div></div><div class="val">3.5K</div></div><div class="lrow us"><div class="rank">#2</div><div class="avatar">T</div><div class="nm">THE STANDARD LIFE</div><div class="bar"><div class="fill us" style="width:50%;background:#3c7cff"></div></div><div class="val">1.7K</div></div><div class="lrow "><div class="rank">#3</div><div class="avatar">W</div><div class="nm">Wongnai Vibes</div><div class="bar"><div class="fill" style="width:4%;background:#d7e1ef"></div></div><div class="val">100</div></div><div class="lrow "><div class="rank">#4</div><div class="avatar">T</div><div class="nm">Time Out Bangkok</div><div class="bar"><div class="fill" style="width:4%;background:#d7e1ef"></div></div><div class="val">34</div></div></div><div class="pcard"><div class="phead"><span class="pname">YouTube</span><span class="chip" style="background:#fff0ef;color:#CC0000">ท้ายตาราง</span><span class="prank">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อคลิป</span></div><div class="lrow "><div class="rank">#1</div><div class="avatar">a</div><div class="nm">alive dot</div><div class="bar"><div class="fill" style="width:100%;background:#d7e1ef"></div></div><div class="val">2.3K</div></div><div class="lrow "><div class="rank">#2</div><div class="avatar">L</div><div class="nm">LifeDot</div><div class="bar"><div class="fill" style="width:29%;background:#d7e1ef"></div></div><div class="val">673</div></div><div class="lrow "><div class="rank">#3</div><div class="avatar">Z</div><div class="nm">Zerosick</div><div class="bar"><div class="fill" style="width:14%;background:#d7e1ef"></div></div><div class="val">331</div></div><div class="lrow "><div class="rank">#4</div><div class="avatar">K</div><div class="nm">Klaoshow</div><div class="bar"><div class="fill" style="width:4%;background:#d7e1ef"></div></div><div class="val">62</div></div><div class="lrow "><div class="rank">#5</div><div class="avatar">T</div><div class="nm">The Longevist</div><div class="bar"><div class="fill" style="width:4%;background:#d7e1ef"></div></div><div class="val">43</div></div><div class="lrow us"><div class="rank">#6</div><div class="avatar">T</div><div class="nm">THE STANDARD LIFE</div><div class="bar"><div class="fill us" style="width:4%;background:#3c7cff"></div></div><div class="val">23</div></div></div></div>
-</div><div class="method">
-<h2>หมายเหตุระเบียบวิธี (Methodology)</h2>
-<p><b>แหล่งข้อมูล:</b> Fanpage Karma export รายสัปดาห์ (Dashboard A + B ช่วง 7 วัน)</p>
-<p><b>คู่แข่ง:</b> กลุ่ม Comp Set ที่ตั้งไว้ต่อบ้าน (5–19 เพจ ต่อบล็อก) ตามที่พี่จอมเคาะ</p>
-<p><b>Ranking:</b> เรียงตามค่าจริง ไม่ตัดค่า extreme ช่องที่ไม่ได้โพสต์ในสัปดาห์นั้นไม่ถูกนำมาจัดอันดับ (ไม่มีค่าเฉลี่ยให้เทียบ)</p>
-<p><b>อ่านยังไง:</b> อันดับที่ดีขึ้นบางจุดมาจากคู่แข่งแผ่ว ไม่ใช่ค่าของเราเพิ่ม — ดูค่าคู่กับอันดับเสมอ · ตัวเลข engagement ต่างแพลตฟอร์มเทียบข้ามกันไม่ได้ (นิยามของ Fanpage Karma ต่างกัน)</p>
-</div></div>
-</body></html>
+  <div class="scroll"><table>
+    <tr><th>อันดับ</th><th>เพจ</th><th style="text-align:right">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
+    <tr><td class="n">1</td><td>Wongnai Vibes</td><td class="n">1,118</td></tr><tr><td class="n">2</td><td>The Cloud</td><td class="n">623</td></tr><tr><td class="n">3</td><td>Time Out Bangkok</td><td class="n">410</td></tr><tr><td class="n">4</td><td>Mirror Thailand</td><td class="n">238</td></tr><tr class="us"><td class="n">5</td><td>THE STANDARD LIFE</td><td class="n">232</td></tr><tr><td class="n">6</td><td>Friday Bangkok</td><td class="n">54</td></tr><tr><td class="n">7</td><td>Tatler Thailand</td><td class="n">20</td></tr><tr><td class="n">8</td><td>Lifestyle Asia Thailand</td><td class="n">15</td></tr><tr><td class="n">9</td><td>KANT - Luxury  Design  Lifestyle</td><td class="n">13</td></tr>
+  </table></div>
+</div>
+<div class="card">
+  <div class="card-hd" style="background:#C13584">
+    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""><span>Instagram</span>
+    <span class="card-metric">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</span>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="v">191,535</div><div class="l">ผู้ติดตาม</div></div>
+    <div class="stat"><div class="v">38</div><div class="l">โพสต์สัปดาห์นี้</div></div>
+    <div class="stat"><div class="v up">+1,854</div><div class="l">ผู้ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">130,827</div><div class="l">คนเห็น/วัน</div></div>
+    <div class="stat"><div class="v" style="color:#16181c">1.4K</div>
+    <div class="l">RCS/โพสต์</div></div>
+  </div>
+  <div class="scroll"><table>
+    <tr><th>อันดับ</th><th>เพจ</th><th style="text-align:right">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
+    <tr><td class="n">1</td><td>Mirror Thailand</td><td class="n">1,971</td></tr><tr class="us"><td class="n">2</td><td>THE STANDARD LIFE</td><td class="n">1,384</td></tr><tr><td class="n">3</td><td>Time Out Bangkok</td><td class="n">834</td></tr><tr><td class="n">4</td><td>The Cloud</td><td class="n">467</td></tr><tr><td class="n">5</td><td>Tatler Thailand</td><td class="n">458</td></tr><tr><td class="n">6</td><td>Friday</td><td class="n">427</td></tr><tr><td class="n">7</td><td>Wongnai Vibes</td><td class="n">173</td></tr>
+  </table></div><div class="note">ข้าม 2 เพจที่ไม่ได้โพสต์: Lifestyle Asia Thailand - En (ไม่ได้โพสต์ในช่วงนี้), KANT JOMINTA (ไม่ได้โพสต์ในช่วงนี้)</div>
+</div>
+<div class="card">
+  <div class="card-hd" style="background:#111111">
+    <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""><span>TikTok</span>
+    <span class="card-metric">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</span>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="v">114,479</div><div class="l">ผู้ติดตาม</div></div>
+    <div class="stat"><div class="v">14</div><div class="l">โพสต์สัปดาห์นี้</div></div>
+    <div class="stat"><div class="v up"><span class="approx">~</span>+758</div><div class="l">ผู้ติดตามสัปดาห์นี้</div></div>
+    <div class="stat"><div class="v" style="color:#16181c">1.7K</div>
+    <div class="l">RCS/โพสต์</div></div>
+  </div>
+  <div class="scroll"><table>
+    <tr><th>อันดับ</th><th>เพจ</th><th style="text-align:right">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
+    <tr><td class="n">1</td><td>The Cloud Podcast</td><td class="n">3,525</td></tr><tr class="us"><td class="n">2</td><td>THE STANDARD LIFE</td><td class="n">1,748</td></tr><tr><td class="n">3</td><td>Wongnai Vibes</td><td class="n">100</td></tr><tr><td class="n">4</td><td>Time Out Bangkok</td><td class="n">34</td></tr>
+  </table></div>
+</div>
+<div class="card">
+  <div class="card-hd" style="background:#FF0000">
+    <img src="https://tsd-pengpis.github.io/digital-report/icons/youtube_white.png" alt=""><span>YouTube</span>
+    <span class="card-metric">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อคลิป</span>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="v">96,700</div><div class="l">ผู้ติดตาม</div></div>
+    <div class="stat"><div class="v">5</div><div class="l">โพสต์สัปดาห์นี้</div></div>
+    <div class="stat"><div class="v up">+1,212</div><div class="l">ผู้ติดตามสัปดาห์นี้</div></div>
+    <div class="stat"><div class="v" style="color:#16181c">23</div>
+    <div class="l">RCS/โพสต์</div></div>
+  </div>
+  <div class="scroll"><table>
+    <tr><th>อันดับ</th><th>เพจ</th><th style="text-align:right">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อคลิป</th></tr>
+    <tr><td class="n">1</td><td>alive dot</td><td class="n">2,284</td></tr><tr><td class="n">2</td><td>LifeDot</td><td class="n">673</td></tr><tr><td class="n">3</td><td>Zerosick</td><td class="n">331</td></tr><tr><td class="n">4</td><td>Klaoshow</td><td class="n">62</td></tr><tr><td class="n">5</td><td>The Longevist</td><td class="n">43</td></tr><tr class="us"><td class="n">6</td><td>THE STANDARD LIFE</td><td class="n">23</td></tr>
+  </table></div><div class="note">ข้าม 1 เพจที่ไม่ได้โพสต์: Be Fit With Jess (ไม่ได้โพสต์ในช่วงนี้)</div>
+</div>
+<div class="card"><div class="card-hd" style="background:#16181c">
+  <span>คอนเทนต์เด่นของ LIFE สัปดาห์นี้</span></div>
+<div class="scroll"><table>
+<tr><th>#</th><th>แพลตฟอร์ม</th><th>วันที่</th><th>คอนเทนต์</th>
+<th style="text-align:right">Engagement</th><th></th></tr>
+<tr><td class="n">1</td><td><span class="pchip" style="background:#C13584">Instagram</span></td><td>8/10/26, 3:32 PM</td><td>หากใครติดตาม ‘ซี ทวินันท์’ ผ่าน Instagram คงคุ้นตากับลุคการแต่งตัวที่โดดเด่น พร้อมเครื่องประดับที่ช่วยเสริมเสน่ห์ให้ทุกลุคอยู่เสมอ…</td><td class="n">15,331</td><td><a href="https://www.instagram.com/reel/Db2l2QwDWov/" target="_blank">เปิดต้นฉบับ</a></td></tr><tr><td class="n">2</td><td><span class="pchip" style="background:#111111">TikTok</span></td><td>8/10/26, 3:31 PM</td><td>หากใครติดตาม ‘ซี ทวินันท์’ ผ่าน Instagram คงคุ้นตากับลุคการแต่งตัวที่โดดเด่น พร้อมเครื่องประดับที่ช่วยเสริมเสน่ห์ให้ทุกลุคอยู่เสมอ…</td><td class="n">12,906</td><td><a href="https://www.tiktok.com/@thestandardlife/video/7672317782138129684" target="_blank">เปิดต้นฉบับ</a></td></tr><tr><td class="n">3</td><td><span class="pchip" style="background:#C13584">Instagram</span></td><td>8/8/26, 11:01 AM</td><td>นิสัยใจเย็นและรักความสงบ คืออีกหนึ่งเสน่ห์ที่แฟน ๆ และคนรอบตัวต่างชื่นชมใน ‘ซี ทวินันท์’ เบื้องหลังความนิ่งนี้ เกิดจากการปลูกฝังขอ…</td><td class="n">11,045</td><td><a href="https://www.instagram.com/reel/Dbw9NkciITg/" target="_blank">เปิดต้นฉบับ</a></td></tr><tr><td class="n">4</td><td><span class="pchip" style="background:#111111">TikTok</span></td><td>8/8/26, 11:00 AM</td><td>นิสัยใจเย็นและรักความสงบ คืออีกหนึ่งเสน่ห์ที่แฟน ๆ และคนรอบตัวต่างชื่นชมใน ‘ซี ทวินันท์’ เบื้องหลังความนิ่งนี้ เกิดจากการปลูกฝังขอ…</td><td class="n">10,135</td><td><a href="https://www.tiktok.com/@thestandardlife/video/7671483639103868167" target="_blank">เปิดต้นฉบับ</a></td></tr><tr><td class="n">5</td><td><span class="pchip" style="background:#1877F2">Facebook</span></td><td>8/12/26, 2:36 PM</td><td>แนวคิดของ Awe Walk คือการเดินที่ไม่ได้สนใจจำนวนก้าวหรือระยะทางเป็นหลัก แต่ชวนให้เราตั้งใจสังเกตสิ่งรอบตัว และเปิดโอกาสให้ตัวเองรู้…</td><td class="n">4,649</td><td><a href="https://www.facebook.com/108707565481586/posts/1053183297700670" target="_blank">เปิดต้นฉบับ</a></td></tr>
+</table></div></div>
+<footer>ข้อมูล: Fanpage Karma · สร้างอัตโนมัติ ·
+<a href="https://tsd-pengpis.github.io/digital-report/">TSD Digital Report ทุกบ้าน</a></footer>
+</div></body></html>
