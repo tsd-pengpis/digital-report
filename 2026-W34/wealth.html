@@ -1,146 +1,249 @@
 <!DOCTYPE html><html lang="th"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#8a5b47">
 <title>THE STANDARD WEALTH · รายงานประจำสัปดาห์ 2026-W34</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans Thai',sans-serif;
-     color:#1f2328;line-height:1.55;background:
-     linear-gradient(180deg,#f3efed 0%,#faf8f8 340px,#f2f4f7 900px)}
-.wrap{max-width:960px;margin:0 auto;padding:0 16px 48px}
-.masthead{background:linear-gradient(120deg,#8a5b47,#b39487);
-  border-radius:0 0 22px 22px;padding:30px 28px 26px;color:#ffffff;
-  display:flex;align-items:center;gap:20px;box-shadow:0 6px 24px #cab5ac}
-.masthead img.logo{width:74px;height:74px;border-radius:18px;background:#fff;
-  padding:8px;box-shadow:0 2px 10px rgba(0,0,0,.18)}
-.masthead h1{font-size:1.65em;letter-spacing:.01em}
-.masthead .sub{opacity:.92;font-size:.92em;margin-top:4px}
-.masthead .week{margin-left:auto;text-align:right;font-size:.8em;opacity:.95}
-.masthead .week b{display:block;font-size:1.7em}
-nav{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
-nav a{text-decoration:none;font-size:.78em;font-weight:700;padding:7px 13px;
-  border-radius:999px;background:#fff;color:#46505a;border:1px solid #d6dbe1}
-nav a.cur{background:#8a5b47;color:#ffffff;border-color:transparent}
-.card{background:#fff;border-radius:16px;margin-top:18px;overflow:hidden;
-  box-shadow:0 2px 12px rgba(16,24,40,.08);border-top:4px solid #8a5b47}
-.card-hd{display:flex;align-items:center;gap:10px;padding:12px 18px;color:#fff;
+  color:#1f2328;line-height:1.55;min-height:100vh;background:
+  linear-gradient(180deg,#f1ebe9 0%,#fbfaf9 260px,#f2f4f7 700px)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 14px 48px}
+/* ---------- masthead (มือถือ: โลโก้+ชื่อ+week ซ้อน) ---------- */
+.masthead{background:linear-gradient(135deg,#8a5b47 0%,#a78475 100%);
+  border-radius:0 0 26px 26px;padding:22px 18px 24px;color:#ffffff;
+  position:relative;overflow:hidden;box-shadow:0 8px 26px #bfa59a }
+.masthead::before,.masthead::after{content:'';position:absolute;border-radius:50%;
+  pointer-events:none}
+.masthead::before{width:190px;height:190px;top:-70px;right:-60px;
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.16),transparent 70%)}
+.masthead::after{width:130px;height:130px;bottom:-55px;left:-35px;
+  background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.10),transparent 70%)}
+.mhead-row{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
+.mhead-row img.logo{width:62px;height:62px;border-radius:16px;background:#fff;
+  padding:7px;box-shadow:0 4px 14px rgba(0,0,0,.18);flex-shrink:0}
+.mhead-row h1{font-size:1.3em;line-height:1.15;letter-spacing:.01em}
+.mhead-row .sub{opacity:.9;font-size:.82em;margin-top:3px}
+.week-pill{margin-left:auto;flex-shrink:0;text-align:center;background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:6px 10px;font-size:.68em;
+  backdrop-filter:blur(4px)}
+.week-pill b{display:block;font-size:1.5em;line-height:1}
+/* ---------- nav scroll แนวนอน (มือถือ) ---------- */
+nav{display:flex;gap:8px;margin:16px 0 4px;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;padding:2px}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;text-decoration:none;font-size:.78em;font-weight:700;
+  padding:8px 14px;border-radius:999px;background:#fff;color:#46505a;
+  border:1px solid #d6dbe1;transition:transform .12s ease,box-shadow .12s ease}
+nav a:active{transform:scale(.95)}
+nav a.cur{box-shadow:0 4px 12px #d0bdb5}
+/* ---------- การ์ด ---------- */
+.card{background:#fff;border-radius:18px;margin-top:16px;overflow:hidden;
+  box-shadow:0 4px 16px rgba(16,24,40,.10);border-top:5px solid #8a5b47}
+.card-hd{display:flex;align-items:center;gap:10px;padding:13px 16px;color:#fff;
   box-shadow:inset 0 -2px 0 rgba(255,255,255,.18)}
-.card-hd img{width:20px;height:20px}
-.card-hd span{font-weight:800}
-.card-hd .card-metric{margin-left:auto;font-size:.74em;font-weight:600;opacity:.92;text-align:right}
-.stats{display:flex;flex-wrap:wrap;gap:10px;padding:14px 18px 4px}
-.stat{flex:1;min-width:118px;background:#f3efed;
-  border-radius:12px;padding:10px 12px;margin-bottom:10px;
-  border-left:4px solid #8a5b47}
-.stat.accent{background:#eae1de;box-shadow:inset 0 0 0 1px #d0bdb5}
-.stat .v{font-size:1.25em;font-weight:800;font-variant-numeric:tabular-nums}
+.card-hd img{width:22px;height:22px}
+.card-hd>span{font-weight:800;font-size:1.02em}
+.card-hd .card-rank{margin-left:auto;font-size:.72em;font-weight:600;opacity:.95;
+  text-align:right;background:rgba(255,255,255,.16);padding:3px 9px;border-radius:999px}
+.card-hd .card-rank b{font-size:1.25em}
+/* ---------- stats grid (มือถือ 2 คอลัมน์) ---------- */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:14px 14px 6px}
+.stat{background:linear-gradient(160deg,#eae1de 0%,#f8f5f4 100%);
+  border-radius:14px;padding:12px 13px;border-left:4px solid #8a5b47;position:relative}
+.stat .v{font-size:1.3em;font-weight:800;font-variant-numeric:tabular-nums}
 .stat .v.up{color:#146c2e} .stat .v.down{color:#b3261e}
-.stat .l{font-size:.68em;color:#66707a;margin-top:2px}
-.approx{opacity:.6}
-table{width:100%;border-collapse:collapse;font-size:.86em}
-th,td{text-align:left;padding:7px 12px;border-bottom:1px solid #e9edf1}
-th{background:#f3efed;font-size:.85em;color:#3d4750}
-td.n{text-align:right;font-variant-numeric:tabular-nums}
-tr.us{background:#f1ebe9;font-weight:800}
-tr.us td:first-child::after{content:' ★';color:#8a5b47;font-size:.8em}
-.scroll{overflow-x:auto}
-.note{font-size:.76em;color:#7b858f;padding:8px 18px 14px}
-.hero-wrap{position:relative;margin-top:18px;border-radius:16px;overflow:hidden;
-  box-shadow:0 4px 16px rgba(16,24,40,.14)}
+.stat .v .ic-arrow{font-size:.7em;margin-right:2px}
+.stat .l{font-size:.68em;color:#5b6670;margin-top:3px;font-weight:600}
+.stat.accent{background:linear-gradient(160deg,#cab5ac 0%,#ede6e3 100%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}
+/* ---------- ตาราง comp + progress bar ---------- */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:.88em;min-width:340px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid #eef1f5;vertical-align:middle}
+th{background:#f6f2f0;font-size:.82em;color:#3d4750;position:sticky;top:0}
+th.r,td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.pname{min-width:170px}
+.rankb{color:#8a5b47;font-size:.9em;margin-left:5px}
+.bar{height:5px;background:#edf0f4;border-radius:99px;margin-top:5px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px;
+  background:linear-gradient(90deg,#8a5b47,#bfa59a)}
+tr.us{background:#f1ebe9;font-weight:700;border-left:4px solid #8a5b47}
+tr.us td:first-child::after{content:' ★';color:#8a5b47;font-size:.85em}
+.note{font-size:.76em;color:#7b858f;padding:9px 16px 14px}
+/* ---------- hero ---------- */
+.hero-wrap{position:relative;margin-top:16px;border-radius:20px;overflow:hidden;
+  box-shadow:0 8px 22px rgba(16,24,40,.18)}
 .hero-img{width:100%;aspect-ratio:20/13;object-fit:cover;display:block}
-.badge1{position:absolute;top:12px;left:12px;color:#fff;font-weight:800;
-  font-size:.8em;padding:6px 12px;border-radius:999px;
-  box-shadow:0 2px 10px rgba(0,0,0,.3);display:flex;align-items:center;gap:6px}
-.badge1 img{width:16px;height:16px}
-.pchip{color:#fff;font-size:.72em;font-weight:700;padding:2px 9px;border-radius:999px;
-  box-shadow:0 1px 4px rgba(16,24,40,.25);display:inline-block}
-footer{text-align:center;color:#8a939d;font-size:.76em;margin-top:26px}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,
+  rgba(8,12,20,0) 35%,rgba(8,12,20,.82) 100%)}
+.badge1{position:absolute;top:12px;left:12px;color:#fff;font-weight:800;font-size:.78em;
+  padding:7px 13px;border-radius:999px;box-shadow:0 3px 12px rgba(0,0,0,.35);
+  display:flex;align-items:center;gap:7px;z-index:2}
+.badge1 img{width:17px;height:17px}
+.hero-cap{position:absolute;left:14px;right:14px;bottom:12px;z-index:2;color:#fff}
+.hero-cap b{display:block;font-size:.98em;line-height:1.35;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.hero-cap span{display:flex;align-items:center;gap:6px;font-size:.7em;opacity:.92;margin-top:5px}
+.hero-cap span img{width:14px;height:14px}
+/* ---------- รายการโพสต์ (การ์ด) ---------- */
+.postlist{display:flex;flex-direction:column;gap:10px;padding:12px 14px 16px}
+.post{display:flex;align-items:center;gap:11px;background:#f8fafc;
+  border:1px solid #e7ebf0;border-radius:14px;padding:10px 12px;
+  transition:transform .12s ease,box-shadow .12s ease}
+.post:active{transform:scale(.985)}
+.pnum{flex:0 0 auto;width:22px;height:22px;border-radius:8px;background:#f3efed;
+  color:#8a5b47;display:flex;align-items:center;justify-content:center;font-size:.78em}
+.picon{flex:0 0 auto;width:34px;height:34px;border-radius:11px;display:flex;
+  align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(16,24,40,.22)}
+.picon img{width:18px;height:18px}
+.pbody{flex:1;min-width:0}
+.ptitle{font-size:.88em;font-weight:600;color:#262b31;display:-webkit-box;
+  -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
+.pmeta{font-size:.7em;color:#7b858f;margin-top:3px}
+.peng{flex:0 0 auto;text-align:right;font-size:.86em;display:flex;flex-direction:column;
+  align-items:flex-end;gap:2px}
+.pm-open{font-size:.68em;color:#8a5b47;font-weight:700;text-decoration:none}
+/* ---------- พื้นฐาน desktop ---------- */
+@media (min-width:720px){
+  .wrap{padding:0 20px 56px}
+  .masthead{padding:28px 30px 30px;border-radius:0 0 30px 30px}
+  .mhead-row img.logo{width:76px;height:76px;padding:8px}
+  .mhead-row h1{font-size:1.7em}
+  .stats{grid-template-columns:repeat(4,1fr)}
+  nav a{padding:9px 16px;font-size:.8em}
+  nav a:hover{transform:translateY(-2px)}
+  .post:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(16,24,40,.12)}
+}
+footer{text-align:center;color:#8a939d;font-size:.76em;margin-top:28px;line-height:1.7}
+footer b{color:#8a5b47}
 footer a{color:#8a5b47;font-weight:700;text-decoration:none}
 </style></head><body>
 <div class="wrap">
 <div class="masthead">
-  <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/wealth.png" alt="THE STANDARD WEALTH">
-  <div><h1>THE STANDARD WEALTH</h1>
-    <div class="sub">รายงานดิจิทัลประจำสัปดาห์ · 11-17 ส.ค. 2026</div></div>
-  <div class="week"><b>2026-W34</b>อัปเดตทุกสัปดาห์</div>
+  <div class="mhead-row">
+    <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/wealth.png" alt="THE STANDARD WEALTH">
+    <div><h1>THE STANDARD WEALTH</h1>
+      <div class="sub">รายงานดิจิทัลประจำสัปดาห์ · 11-17 ส.ค. 2026</div></div>
+    <div class="week-pill"><b>2026-W34</b>อัปเดต<br>ทุกสัปดาห์</div>
+  </div>
 </div>
-<nav><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/news.html">NEWS</a><a class="cur" href="https://tsd-pengpis.github.io/digital-report/2026-W34/wealth.html">WEALTH</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/pop.html">POP</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/life.html">LIFE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/sport.html">SPORT</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/knd.html">KND</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/tss.html">SECRET SAUCE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/podcast.html">PODCAST</a></nav>
-<div class="hero-wrap"><img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W34/img/wealth.jpg" alt=""><div class="badge1" style="background:linear-gradient(90deg,#C13584 0%,#d26ea6 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt="">คอนเทนต์เด่น #1 ของบ้าน</div></div>
+<nav><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/news.html">NEWS</a><a class="cur" style="background:#8a5b47;color:#ffffff;border-color:transparent" href="https://tsd-pengpis.github.io/digital-report/2026-W34/wealth.html">WEALTH</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/pop.html">POP</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/life.html">LIFE</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/sport.html">SPORT</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/knd.html">KND</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/tss.html">SECRET SAUCE</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/podcast.html">PODCAST</a></nav>
+<div class="hero-wrap"><img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W34/img/wealth.jpg" alt=""><div class="hero-veil"></div><div class="badge1" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt="">คอนเทนต์เด่น #1 ของบ้าน</div><div class="hero-cap"><b>ทหารไทย ในมุมมอง ทหารสหรัฐฯ #thestandardwealth #ทหาร #ทหารไทย #ทหารสหร…</b><span><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt="">Instagram · 8/13/26, 7:27 PM · <b>40,834</b> engagement</span></div></div>
 
 <div class="card">
-  <div class="card-hd" style="background:linear-gradient(90deg,#1877F2 0%,#599df6 100%)">
+  <div class="card-hd" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
     <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""><span>Facebook</span>
-    <span class="card-metric">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</span>
+    <span class="card-rank"><b>2</b>/9 ในลีก</span>
   </div>
   <div class="stats">
     <div class="stat"><div class="v">810,204</div><div class="l">ผู้ติดตาม</div></div>
     <div class="stat"><div class="v">94</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up">+825</div><div class="l">ผู้ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">385,802</div><div class="l">คนเห็น/วัน</div></div>
+    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>+825</div><div class="l">ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">385,802</div><div class="l">คนเห็น/วัน</div></div>
     <div class="stat accent"><div class="v" style="color:#8a5b47">1.0K</div>
     <div class="l">RCS/โพสต์</div></div>
   </div>
   <div class="scroll"><table>
-    <tr><th>อันดับ</th><th>เพจ</th><th style="text-align:right">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
-    <tr><td class="n">1</td><td>ทันโลกกับ Trader KP</td><td class="n">1,387</td></tr><tr class="us"><td class="n">2</td><td>THE STANDARD WEALTH</td><td class="n">1,009</td></tr><tr><td class="n">3</td><td>ลงทุนแมน</td><td class="n">780</td></tr><tr><td class="n">4</td><td>TODAY Bizview</td><td class="n">778</td></tr><tr><td class="n">5</td><td>FINNOMENA</td><td class="n">498</td></tr><tr><td class="n">6</td><td>ถามอีก กับอิก - EIG - Earn Invest Grow</td><td class="n">430</td></tr><tr><td class="n">7</td><td>กรุงเทพธุรกิจ</td><td class="n">340</td></tr><tr><td class="n">8</td><td>Thairath Money</td><td class="n">263</td></tr><tr><td class="n">9</td><td>Money Chat</td><td class="n">263</td></tr>
+    <tr><th>#</th><th>เพจ</th><th class="r">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
+    <tr><td class="n">1</td><td class="pname">ทันโลกกับ Trader KP<div class="bar"><i style="width:100%"></i></div></td><td class="n">1,387</td></tr><tr class="us"><td class="n">2</td><td class="pname">THE STANDARD WEALTH<span class="rankb">★</span><div class="bar"><i style="width:73%"></i></div></td><td class="n">1,009</td></tr><tr><td class="n">3</td><td class="pname">ลงทุนแมน<div class="bar"><i style="width:56%"></i></div></td><td class="n">780</td></tr><tr><td class="n">4</td><td class="pname">TODAY Bizview<div class="bar"><i style="width:56%"></i></div></td><td class="n">778</td></tr><tr><td class="n">5</td><td class="pname">FINNOMENA<div class="bar"><i style="width:36%"></i></div></td><td class="n">498</td></tr><tr><td class="n">6</td><td class="pname">ถามอีก กับอิก - EIG - Earn Invest Grow<div class="bar"><i style="width:31%"></i></div></td><td class="n">430</td></tr><tr><td class="n">7</td><td class="pname">กรุงเทพธุรกิจ<div class="bar"><i style="width:25%"></i></div></td><td class="n">340</td></tr><tr><td class="n">8</td><td class="pname">Thairath Money<div class="bar"><i style="width:19%"></i></div></td><td class="n">263</td></tr><tr><td class="n">9</td><td class="pname">Money Chat<div class="bar"><i style="width:19%"></i></div></td><td class="n">263</td></tr>
   </table></div>
 </div>
 <div class="card">
-  <div class="card-hd" style="background:linear-gradient(90deg,#c4302b 0%,#d56a66 100%)">
+  <div class="card-hd" style="background:linear-gradient(135deg,#c4302b 0%,#d36460 100%)">
     <img src="https://tsd-pengpis.github.io/digital-report/icons/youtube_white.png" alt=""><span>YouTube</span>
-    <span class="card-metric">คนดูเฉลี่ยต่อคลิป</span>
+    <span class="card-rank"><b>4</b>/9 ในลีก</span>
   </div>
   <div class="stats">
     <div class="stat"><div class="v">763,000</div><div class="l">ผู้ติดตาม</div></div>
     <div class="stat"><div class="v">30</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up">+3,409</div><div class="l">ผู้ติดตามสัปดาห์นี้</div></div>
+    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>+3,409</div><div class="l">ติดตามสัปดาห์นี้</div></div>
     <div class="stat accent"><div class="v" style="color:#8a5b47">16K</div>
     <div class="l">คนดูเฉลี่ย/คลิป</div></div>
   </div>
   <div class="scroll"><table>
-    <tr><th>อันดับ</th><th>เพจ</th><th style="text-align:right">คนดูเฉลี่ยต่อคลิป</th></tr>
-    <tr><td class="n">1</td><td>BT beartai</td><td class="n">56,114</td></tr><tr><td class="n">2</td><td>ลงทุนแมน</td><td class="n">39,097</td></tr><tr><td class="n">3</td><td>ทันโลกกับ Trader KP</td><td class="n">17,289</td></tr><tr class="us"><td class="n">4</td><td>THE STANDARD WEALTH</td><td class="n">16,291</td></tr><tr><td class="n">5</td><td>Money Chat Thailand</td><td class="n">11,377</td></tr><tr><td class="n">6</td><td>FINNOMENA</td><td class="n">8,820</td></tr><tr><td class="n">7</td><td>กรุงเทพธุรกิจ</td><td class="n">5,409</td></tr><tr><td class="n">8</td><td>ถามอีก กับอิก - EIG - Earn Invest Grow</td><td class="n">3,949</td></tr><tr><td class="n">9</td><td>TODAY Bizview</td><td class="n">2,324</td></tr>
+    <tr><th>#</th><th>เพจ</th><th class="r">คนดูเฉลี่ยต่อคลิป</th></tr>
+    <tr><td class="n">1</td><td class="pname">BT beartai<div class="bar"><i style="width:100%"></i></div></td><td class="n">56,114</td></tr><tr><td class="n">2</td><td class="pname">ลงทุนแมน<div class="bar"><i style="width:70%"></i></div></td><td class="n">39,097</td></tr><tr><td class="n">3</td><td class="pname">ทันโลกกับ Trader KP<div class="bar"><i style="width:31%"></i></div></td><td class="n">17,289</td></tr><tr class="us"><td class="n">4</td><td class="pname">THE STANDARD WEALTH<span class="rankb">★</span><div class="bar"><i style="width:29%"></i></div></td><td class="n">16,291</td></tr><tr><td class="n">5</td><td class="pname">Money Chat Thailand<div class="bar"><i style="width:20%"></i></div></td><td class="n">11,377</td></tr><tr><td class="n">6</td><td class="pname">FINNOMENA<div class="bar"><i style="width:16%"></i></div></td><td class="n">8,820</td></tr><tr><td class="n">7</td><td class="pname">กรุงเทพธุรกิจ<div class="bar"><i style="width:10%"></i></div></td><td class="n">5,409</td></tr><tr><td class="n">8</td><td class="pname">ถามอีก กับอิก - EIG - Earn Invest Grow<div class="bar"><i style="width:7%"></i></div></td><td class="n">3,949</td></tr><tr><td class="n">9</td><td class="pname">TODAY Bizview<div class="bar"><i style="width:4%"></i></div></td><td class="n">2,324</td></tr>
   </table></div>
 </div>
 <div class="card">
-  <div class="card-hd" style="background:linear-gradient(90deg,#16181c 0%,#57595c 100%)">
+  <div class="card-hd" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)">
     <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""><span>TikTok</span>
-    <span class="card-metric">คนดูเฉลี่ยต่อชิ้น</span>
+    <span class="card-rank"><b>5</b>/9 ในลีก</span>
   </div>
   <div class="stats">
     <div class="stat"><div class="v">451,477</div><div class="l">ผู้ติดตาม</div></div>
     <div class="stat"><div class="v">10</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up"><span class="approx">~</span>+1,325</div><div class="l">ผู้ติดตามสัปดาห์นี้</div></div>
+    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>~+1,325</div><div class="l">ติดตามสัปดาห์นี้</div></div>
     <div class="stat accent"><div class="v" style="color:#8a5b47">8.2K</div>
     <div class="l">คนดู/โพสต์</div></div>
   </div>
   <div class="scroll"><table>
-    <tr><th>อันดับ</th><th>เพจ</th><th style="text-align:right">คนดูเฉลี่ยต่อชิ้น</th></tr>
-    <tr><td class="n">1</td><td>TODAY Bizview</td><td class="n">20,606</td></tr><tr><td class="n">2</td><td>EIG - Earn Invest Grow</td><td class="n">12,989</td></tr><tr><td class="n">3</td><td>ลงทุนแมน</td><td class="n">10,919</td></tr><tr><td class="n">4</td><td>ทันโลกกับ Trader KP</td><td class="n">8,730</td></tr><tr class="us"><td class="n">5</td><td>THE STANDARD WEALTH</td><td class="n">8,195</td></tr><tr><td class="n">6</td><td>moneychatthailand</td><td class="n">7,393</td></tr><tr><td class="n">7</td><td>กรุงเทพธุรกิจ</td><td class="n">6,872</td></tr><tr><td class="n">8</td><td>Thairath Money</td><td class="n">3,809</td></tr><tr><td class="n">9</td><td>Finnomena</td><td class="n">659</td></tr>
+    <tr><th>#</th><th>เพจ</th><th class="r">คนดูเฉลี่ยต่อชิ้น</th></tr>
+    <tr><td class="n">1</td><td class="pname">TODAY Bizview<div class="bar"><i style="width:100%"></i></div></td><td class="n">20,606</td></tr><tr><td class="n">2</td><td class="pname">EIG - Earn Invest Grow<div class="bar"><i style="width:63%"></i></div></td><td class="n">12,989</td></tr><tr><td class="n">3</td><td class="pname">ลงทุนแมน<div class="bar"><i style="width:53%"></i></div></td><td class="n">10,919</td></tr><tr><td class="n">4</td><td class="pname">ทันโลกกับ Trader KP<div class="bar"><i style="width:42%"></i></div></td><td class="n">8,730</td></tr><tr class="us"><td class="n">5</td><td class="pname">THE STANDARD WEALTH<span class="rankb">★</span><div class="bar"><i style="width:40%"></i></div></td><td class="n">8,195</td></tr><tr><td class="n">6</td><td class="pname">moneychatthailand<div class="bar"><i style="width:36%"></i></div></td><td class="n">7,393</td></tr><tr><td class="n">7</td><td class="pname">กรุงเทพธุรกิจ<div class="bar"><i style="width:33%"></i></div></td><td class="n">6,872</td></tr><tr><td class="n">8</td><td class="pname">Thairath Money<div class="bar"><i style="width:18%"></i></div></td><td class="n">3,809</td></tr><tr><td class="n">9</td><td class="pname">Finnomena<div class="bar"><i style="width:3%"></i></div></td><td class="n">659</td></tr>
   </table></div>
 </div>
 <div class="card">
-  <div class="card-hd" style="background:linear-gradient(90deg,#C13584 0%,#d26ea6 100%)">
+  <div class="card-hd" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
     <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""><span>Instagram</span>
-    <span class="card-metric">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</span>
+    <span class="card-rank"><b>1</b>/8 ในลีก</span>
   </div>
   <div class="stats">
     <div class="stat"><div class="v">182,202</div><div class="l">ผู้ติดตาม</div></div>
     <div class="stat"><div class="v">24</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up">+1,194</div><div class="l">ผู้ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">64,448</div><div class="l">คนเห็น/วัน</div></div>
+    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>+1,194</div><div class="l">ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">64,448</div><div class="l">คนเห็น/วัน</div></div>
     <div class="stat accent"><div class="v" style="color:#8a5b47">2.3K</div>
     <div class="l">RCS/โพสต์</div></div>
   </div>
   <div class="scroll"><table>
-    <tr><th>อันดับ</th><th>เพจ</th><th style="text-align:right">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
-    <tr class="us"><td class="n">1</td><td>THE STANDARD WEALTH</td><td class="n">2,298</td></tr><tr><td class="n">2</td><td>ลงทุนแมน</td><td class="n">774</td></tr><tr><td class="n">3</td><td>FINNOMENA</td><td class="n">601</td></tr><tr><td class="n">4</td><td>TODAY Bizview</td><td class="n">418</td></tr><tr><td class="n">5</td><td>Thairath Money</td><td class="n">410</td></tr><tr><td class="n">6</td><td>กรุงเทพธุรกิจ</td><td class="n">394</td></tr><tr><td class="n">7</td><td>Business Tomorrow</td><td class="n">188</td></tr><tr><td class="n">8</td><td>ถามอีก กับอิก TAM-EIG</td><td class="n">107</td></tr>
-  </table></div><div class="note">ข้าม 1 เพจที่ไม่ได้โพสต์: Money Chat Thailand (ไม่ได้โพสต์ในช่วงนี้)</div>
+    <tr><th>#</th><th>เพจ</th><th class="r">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
+    <tr class="us"><td class="n">1</td><td class="pname">THE STANDARD WEALTH<span class="rankb">★</span><div class="bar"><i style="width:100%"></i></div></td><td class="n">2,298</td></tr><tr><td class="n">2</td><td class="pname">ลงทุนแมน<div class="bar"><i style="width:34%"></i></div></td><td class="n">774</td></tr><tr><td class="n">3</td><td class="pname">FINNOMENA<div class="bar"><i style="width:26%"></i></div></td><td class="n">601</td></tr><tr><td class="n">4</td><td class="pname">TODAY Bizview<div class="bar"><i style="width:18%"></i></div></td><td class="n">418</td></tr><tr><td class="n">5</td><td class="pname">Thairath Money<div class="bar"><i style="width:18%"></i></div></td><td class="n">410</td></tr><tr><td class="n">6</td><td class="pname">กรุงเทพธุรกิจ<div class="bar"><i style="width:17%"></i></div></td><td class="n">394</td></tr><tr><td class="n">7</td><td class="pname">Business Tomorrow<div class="bar"><i style="width:8%"></i></div></td><td class="n">188</td></tr><tr><td class="n">8</td><td class="pname">ถามอีก กับอิก TAM-EIG<div class="bar"><i style="width:5%"></i></div></td><td class="n">107</td></tr>
+  </table></div><div class="note">⏭️ ข้าม 1 เพจที่ไม่ได้โพสต์: Money Chat Thailand (ไม่ได้โพสต์ในช่วงนี้)</div>
 </div>
-<div class="card"><div class="card-hd" style="background:#8a5b47">
-  <span>คอนเทนต์เด่นของ WEALTH สัปดาห์นี้</span></div>
-<div class="scroll"><table>
-<tr><th>#</th><th>แพลตฟอร์ม</th><th>วันที่</th><th>คอนเทนต์</th>
-<th style="text-align:right">Engagement</th><th></th></tr>
-<tr><td class="n">1</td><td><span class="pchip" style="background:linear-gradient(90deg,#C13584 0%,#c13584 100%)">Instagram</span></td><td>8/13/26, 7:27 PM</td><td>ทหารไทย ในมุมมอง ทหารสหรัฐฯ #thestandardwealth #ทหาร #ทหารไทย #ทหารสหรัฐ</td><td class="n">40,834</td><td><a href="https://www.instagram.com/reel/Db-vIgNuOTd/" target="_blank">เปิดต้นฉบับ</a></td></tr><tr><td class="n">2</td><td><span class="pchip" style="background:linear-gradient(90deg,#1877F2 0%,#1877f2 100%)">Facebook</span></td><td>8/13/26, 7:27 PM</td><td>ทหารไทย ในมุมมอง ทหารสหรัฐฯ #thestandardwealth #ทหาร #ทหารไทย #ทหารสหรัฐ</td><td class="n">35,232</td><td><a href="https://www.facebook.com/reel/1721680765710827/" target="_blank">เปิดต้นฉบับ</a></td></tr><tr><td class="n">3</td><td><span class="pchip" style="background:linear-gradient(90deg,#1877F2 0%,#1877f2 100%)">Facebook</span></td><td>8/17/26, 2:57 PM</td><td>เศรษฐกิจไทย (GDP) ในไตรมาสที่ 2 ของปี 2569 ขยายตัว 1.9% YoY ชะลอตัวลงจากที่ขยายตัว 2.8% YoY ในไตรมาสแรกของปี 2569 ดังนั้น เมื่อเที…</td><td class="n">16,475</td><td><a href="https://www.facebook.com/947322343215115/posts/1927881341825872" target="_blank">เปิดต้นฉบับ</a></td></tr><tr><td class="n">4</td><td><span class="pchip" style="background:linear-gradient(90deg,#1877F2 0%,#1877f2 100%)">Facebook</span></td><td>8/17/26, 12:28 PM</td><td>UPDATE: เศรษฐกิจไทยขยายตัวชะลอลงเหลือ 1.9% ในไตรมาส 2 ต่ำสุดในอาเซียน พ้นจุดต่ำสุดหรือยัง? เศรษฐกิจไทย (GDP) ไตรมาส 2 ปี 2569 ชะลอ…</td><td class="n">11,224</td><td><a href="https://www.facebook.com/947322343215115/posts/1927785718502101" target="_blank">เปิดต้นฉบับ</a></td></tr><tr><td class="n">5</td><td><span class="pchip" style="background:linear-gradient(90deg,#1877F2 0%,#1877f2 100%)">Facebook</span></td><td>8/17/26, 2:44 PM</td><td>UPDATE: ‘เอกนิติ’ ชี้ GDP ไตรมาส 2 โต 1.9% แม้ไม่ถูกใจ แต่สะท้อนไทยมาถูกทางในการประคองเศรษฐกิจ ก่อนเข้าสู่ระดับศักยภาพ ‘เอกนิติ’ ร…</td><td class="n">6,129</td><td><a href="https://www.facebook.com/947322343215115/posts/1927872618493411" target="_blank">เปิดต้นฉบับ</a></td></tr>
-</table></div></div>
-<footer>ข้อมูล: Fanpage Karma · สร้างอัตโนมัติ ·
+<div class="card"><div class="card-hd" style="background:linear-gradient(135deg,#8a5b47 0%,#a17c6c 100%)">
+  <span>คอนเทนต์เด่นของ WEALTH สัปดาห์นี้</span>
+  <span class="card-rank">Top 6</span></div>
+<div class="postlist">
+
+<div class="post">
+  <div class="pnum"><b>2</b></div>
+  <div class="picon" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
+    <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></div>
+  <div class="pbody">
+    <div class="ptitle">ทหารไทย ในมุมมอง ทหารสหรัฐฯ #thestandardwealth #ทหาร #ทหารไทย #ทหารสหรัฐ</div>
+    <div class="pmeta">Facebook · 8/13/26, 7:27 PM</div>
+  </div>
+  <div class="peng" style="color:#8a5b47"><b>35,232</b><a class="pm-open" href="https://www.facebook.com/reel/1721680765710827/" target="_blank">เปิด →</a></div>
+</div>
+<div class="post">
+  <div class="pnum"><b>3</b></div>
+  <div class="picon" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
+    <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></div>
+  <div class="pbody">
+    <div class="ptitle">เศรษฐกิจไทย (GDP) ในไตรมาสที่ 2 ของปี 2569 ขยายตัว 1.9% YoY ชะลอตัวลงจากที่ขยายตัว 2.8% Yo…</div>
+    <div class="pmeta">Facebook · 8/17/26, 2:57 PM</div>
+  </div>
+  <div class="peng" style="color:#8a5b47"><b>16,475</b><a class="pm-open" href="https://www.facebook.com/947322343215115/posts/1927881341825872" target="_blank">เปิด →</a></div>
+</div>
+<div class="post">
+  <div class="pnum"><b>4</b></div>
+  <div class="picon" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
+    <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></div>
+  <div class="pbody">
+    <div class="ptitle">UPDATE: เศรษฐกิจไทยขยายตัวชะลอลงเหลือ 1.9% ในไตรมาส 2 ต่ำสุดในอาเซียน พ้นจุดต่ำสุดหรือยัง?…</div>
+    <div class="pmeta">Facebook · 8/17/26, 12:28 PM</div>
+  </div>
+  <div class="peng" style="color:#8a5b47"><b>11,224</b><a class="pm-open" href="https://www.facebook.com/947322343215115/posts/1927785718502101" target="_blank">เปิด →</a></div>
+</div>
+<div class="post">
+  <div class="pnum"><b>5</b></div>
+  <div class="picon" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
+    <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></div>
+  <div class="pbody">
+    <div class="ptitle">UPDATE: ‘เอกนิติ’ ชี้ GDP ไตรมาส 2 โต 1.9% แม้ไม่ถูกใจ แต่สะท้อนไทยมาถูกทางในการประคองเศรษ…</div>
+    <div class="pmeta">Facebook · 8/17/26, 2:44 PM</div>
+  </div>
+  <div class="peng" style="color:#8a5b47"><b>6,129</b><a class="pm-open" href="https://www.facebook.com/947322343215115/posts/1927872618493411" target="_blank">เปิด →</a></div>
+</div>
+</div></div>
+<footer>ข้อมูล: <b>Fanpage Karma</b> · สร้างอัตโนมัติทุกสัปดาห์ ·
 <a href="https://tsd-pengpis.github.io/digital-report/">TSD Digital Report ทุกบ้าน</a></footer>
 </div></body></html>
