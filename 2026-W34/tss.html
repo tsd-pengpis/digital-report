@@ -4,246 +4,232 @@
 <title>THE SECRET SAUCE · รายงานประจำสัปดาห์ 2026-W34</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans Thai',sans-serif;
-  color:#1f2328;line-height:1.55;min-height:100vh;background:
-  linear-gradient(180deg,#fff7e2 0%,#fffdf8 260px,#f2f4f7 700px)}
-.wrap{max-width:1000px;margin:0 auto;padding:0 14px 48px}
-/* ---------- masthead (มือถือ: โลโก้+ชื่อ+week ซ้อน) ---------- */
-.masthead{background:linear-gradient(135deg,#febf0f 0%,#fecf4b 100%);
-  border-radius:0 0 26px 26px;padding:22px 18px 24px;color:#3d2f00;
-  position:relative;overflow:hidden;box-shadow:0 8px 26px #fedc7b }
-.masthead::before,.masthead::after{content:'';position:absolute;border-radius:50%;
-  pointer-events:none}
-.masthead::before{width:190px;height:190px;top:-70px;right:-60px;
-  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.16),transparent 70%)}
-.masthead::after{width:130px;height:130px;bottom:-55px;left:-35px;
-  background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.10),transparent 70%)}
-.mhead-row{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
-.mhead-row img.logo{width:62px;height:62px;border-radius:16px;background:#fff;
-  padding:7px;box-shadow:0 4px 14px rgba(0,0,0,.18);flex-shrink:0}
-.mhead-row h1{font-size:1.3em;line-height:1.15;letter-spacing:.01em}
-.mhead-row .sub{opacity:.9;font-size:.82em;margin-top:3px}
-.week-pill{margin-left:auto;flex-shrink:0;text-align:center;background:rgba(255,255,255,.15);
-  border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:6px 10px;font-size:.68em;
-  backdrop-filter:blur(4px)}
-.week-pill b{display:block;font-size:1.5em;line-height:1}
-/* ---------- nav scroll แนวนอน (มือถือ) ---------- */
-nav{display:flex;gap:8px;margin:16px 0 4px;overflow-x:auto;scrollbar-width:none;
-  -webkit-overflow-scrolling:touch;padding:2px}
-nav::-webkit-scrollbar{display:none}
-nav a{flex:0 0 auto;text-decoration:none;font-size:.78em;font-weight:700;
-  padding:8px 14px;border-radius:999px;background:#fff;color:#46505a;
-  border:1px solid #d6dbe1;transition:transform .12s ease,box-shadow .12s ease}
-nav a:active{transform:scale(.95)}
-nav a.cur{box-shadow:0 4px 12px #ffe59f}
-/* ---------- การ์ด ---------- */
-.card{background:#fff;border-radius:18px;margin-top:16px;overflow:hidden;
-  box-shadow:0 4px 16px rgba(16,24,40,.10);border-top:5px solid #febf0f}
-.card-hd{display:flex;align-items:center;gap:10px;padding:13px 16px;color:#fff;
-  box-shadow:inset 0 -2px 0 rgba(255,255,255,.18)}
-.card-hd img{width:22px;height:22px}
-.card-hd>span{font-weight:800;font-size:1.02em}
-.card-hd .card-rank{margin-left:auto;font-size:.72em;font-weight:600;opacity:.95;
-  text-align:right;background:rgba(255,255,255,.16);padding:3px 9px;border-radius:999px}
-.card-hd .card-rank b{font-size:1.25em}
-/* ---------- stats grid (มือถือ 2 คอลัมน์) ---------- */
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:14px 14px 6px}
-.stat{background:linear-gradient(160deg,#fff3d4 0%,#fffbf1 100%);
-  border-radius:14px;padding:12px 13px;border-left:4px solid #febf0f;position:relative}
-.stat .v{font-size:1.3em;font-weight:800;font-variant-numeric:tabular-nums}
-.stat .v.up{color:#146c2e} .stat .v.down{color:#b3261e}
-.stat .v .ic-arrow{font-size:.7em;margin-right:2px}
-.stat .l{font-size:.68em;color:#5b6670;margin-top:3px;font-weight:600}
-.stat.accent{background:linear-gradient(160deg,#ffe293 0%,#fff5db 100%);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}
-/* ---------- ตาราง comp + progress bar ---------- */
-.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-table{width:100%;border-collapse:collapse;font-size:.88em;min-width:340px}
-th,td{text-align:left;padding:9px 12px;border-bottom:1px solid #eef1f5;vertical-align:middle}
-th{background:#fffaec;font-size:.82em;color:#3d4750;position:sticky;top:0}
-th.r,td.n{text-align:right;font-variant-numeric:tabular-nums}
-td.pname{min-width:170px}
-.rankb{color:#febf0f;font-size:.9em;margin-left:5px}
-.bar{height:5px;background:#edf0f4;border-radius:99px;margin-top:5px;overflow:hidden}
-.bar i{display:block;height:100%;border-radius:99px;
-  background:linear-gradient(90deg,#febf0f,#fedc7b)}
-tr.us{background:#fff7e2;font-weight:700;border-left:4px solid #febf0f}
-tr.us td:first-child::after{content:' ★';color:#febf0f;font-size:.85em}
-.note{font-size:.76em;color:#7b858f;padding:9px 16px 14px}
-/* ---------- hero ---------- */
-.hero-wrap{position:relative;margin-top:16px;border-radius:20px;overflow:hidden;
-  box-shadow:0 8px 22px rgba(16,24,40,.18)}
-.hero-img{width:100%;aspect-ratio:20/13;object-fit:cover;display:block}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,
-  rgba(8,12,20,0) 35%,rgba(8,12,20,.82) 100%)}
-.badge1{position:absolute;top:12px;left:12px;color:#fff;font-weight:800;font-size:.78em;
-  padding:7px 13px;border-radius:999px;box-shadow:0 3px 12px rgba(0,0,0,.35);
-  display:flex;align-items:center;gap:7px;z-index:2}
-.badge1 img{width:17px;height:17px}
-.hero-cap{position:absolute;left:14px;right:14px;bottom:12px;z-index:2;color:#fff}
-.hero-cap b{display:block;font-size:.98em;line-height:1.35;text-shadow:0 1px 6px rgba(0,0,0,.5)}
-.hero-cap span{display:flex;align-items:center;gap:6px;font-size:.7em;opacity:.92;margin-top:5px}
-.hero-cap span img{width:14px;height:14px}
-/* ---------- รายการโพสต์ (การ์ด) ---------- */
-.postlist{display:flex;flex-direction:column;gap:10px;padding:12px 14px 16px}
-.post{display:flex;align-items:center;gap:11px;background:#f8fafc;
-  border:1px solid #e7ebf0;border-radius:14px;padding:10px 12px;
-  transition:transform .12s ease,box-shadow .12s ease}
-.post:active{transform:scale(.985)}
-.pnum{flex:0 0 auto;width:22px;height:22px;border-radius:8px;background:#fff9e7;
-  color:#febf0f;display:flex;align-items:center;justify-content:center;font-size:.78em}
-.picon{flex:0 0 auto;width:34px;height:34px;border-radius:11px;display:flex;
-  align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(16,24,40,.22)}
-.picon img{width:18px;height:18px}
-.pbody{flex:1;min-width:0}
-.ptitle{font-size:.88em;font-weight:600;color:#262b31;display:-webkit-box;
-  -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
-.pmeta{font-size:.7em;color:#7b858f;margin-top:3px}
-.peng{flex:0 0 auto;text-align:right;font-size:.86em;display:flex;flex-direction:column;
-  align-items:flex-end;gap:2px}
-.pm-open{font-size:.68em;color:#febf0f;font-weight:700;text-decoration:none}
-/* ---------- พื้นฐาน desktop ---------- */
-@media (min-width:720px){
-  .wrap{padding:0 20px 56px}
-  .masthead{padding:28px 30px 30px;border-radius:0 0 30px 30px}
-  .mhead-row img.logo{width:76px;height:76px;padding:8px}
-  .mhead-row h1{font-size:1.7em}
-  .stats{grid-template-columns:repeat(4,1fr)}
-  nav a{padding:9px 16px;font-size:.8em}
-  nav a:hover{transform:translateY(-2px)}
-  .post:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(16,24,40,.12)}
+  color:#1f2328;line-height:1.5;background:#eceff3;min-height:100vh}
+.page{max-width:1000px;margin:0 auto;padding:0 12px 40px}
+h1{font-size:1.3em;margin-bottom:6px}
+/* ---------- masthead (การ์ดหัวบ้าน) ---------- */
+.bubble{background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 2px 10px rgba(16,24,40,.09)}
+.hd{display:flex;align-items:center;gap:10px;padding:13px 16px;color:#fff}
+.hd .plat{width:28px;height:28px;border-radius:8px;display:flex;flex-shrink:0;
+  align-items:center;justify-content:center}
+.hd .plat img{width:16px;height:16px;display:block}
+.hd .t{font-weight:800;flex:1;min-width:0;font-size:.98em}
+.hd .badge{font-size:.72em;font-weight:800;padding:4px 9px;border-radius:11px;
+  flex-shrink:0;white-space:nowrap}
+main{display:grid;gap:14px;margin-top:14px}
+.hero-bubble .hero-img{width:100%;aspect-ratio:20/13;object-fit:cover;display:block}
+.hero-bubble.no-pic .bd{padding-top:14px}
+.bd{padding:12px 16px 14px}
+.feat .fcap{font-size:.95em;font-weight:700;line-height:1.45}
+.feat .fmeta{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:8px;
+  font-size:.76em;color:#5c666f}
+.fban{font-size:.78em;font-weight:800;padding:3px 10px;border-radius:11px;margin-left:auto}
+.pc-open{color:#febf0f;font-weight:700;text-decoration:none}
+/* ---------- cards grid: desktop 2 คอล ---------- */
+@media (min-width:640px){
+  main{grid-template-columns:repeat(2,1fr)}
+  .hero-bubble,.take-bubble,.posts-bubble{grid-column:1/-1}
 }
-footer{text-align:center;color:#8a939d;font-size:.76em;margin-top:28px;line-height:1.7}
-footer b{color:#febf0f}
-footer a{color:#febf0f;font-weight:700;text-decoration:none}
+/* ---------- stats แถว ---------- */
+.st{display:flex;gap:8px}
+.st .c{flex:1;min-width:0;text-align:left;background:#f7f9fb;border-radius:10px;
+  padding:9px 10px}
+.st .c .n{font-size:1.02em;font-weight:800;font-variant-numeric:tabular-nums}
+.st .c .n.v-up{color:#146c2e} .st .c .n.v-down{color:#b3261e}
+.st .c .l{font-size:.63em;color:#7b858f;margin-top:2px;white-space:nowrap}
+.mlabel{font-size:.7em;color:#7b858f;margin:8px 2px 0;font-weight:600}
+/* ---------- leaderboard ---------- */
+.lb{margin-top:8px}
+.lb-row{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:8px}
+.lb-row .rk{width:18px;font-size:.76em;color:#9aa3ab;font-weight:800;flex-shrink:0}
+.lb-row .nm{flex:1;min-width:0;font-size:.8em;color:#46505a;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.lb-row .star{color:#febf0f;margin-left:4px}
+.lb-row .bar{flex:1;max-width:90px;height:5px;background:#eef1f5;border-radius:99px;
+  overflow:hidden}
+.lb-row .bar i{display:block;height:100%;border-radius:99px;
+  background:linear-gradient(90deg,#febf0f,#fedc7b)}
+.lb-row .vl{font-size:.78em;font-weight:700;color:#46505a;flex-shrink:0;
+  font-variant-numeric:tabular-nums}
+.lb-row.us{background:#fff9e7;font-weight:800}
+.lb-row.us .nm{color:#1f2328}
+.warn{background:#fdf3d7;border:1px solid #e8d089;color:#6b4e00;border-radius:8px;
+  padding:8px 10px;font-size:.74em;margin-top:10px}
+/* ---------- takeaway ---------- */
+.take{background:#f5f7f9;border-radius:10px;padding:12px 14px}
+.take-l{font-size:.82em;color:#3d4750;line-height:1.6;margin-top:6px}
+.take-l:first-child{font-weight:800;color:#febf0f;margin-top:0}
+/* ---------- โพสต์ ---------- */
+.pc{display:flex;align-items:center;gap:10px;padding:10px 0;text-decoration:none;
+  color:inherit;border-bottom:1px solid #eef1f5}
+.pc:last-child{border-bottom:none}
+.pc .rk{width:16px;font-size:.8em;font-weight:800;color:#c8ced5;flex-shrink:0}
+.pc .plat-mini{width:30px;height:30px;border-radius:9px;display:flex;flex-shrink:0;
+  align-items:center;justify-content:center}
+.pc .plat-mini img{width:16px;height:16px}
+.pc .body{flex:1;min-width:0}
+.pc .cap{font-size:.86em;font-weight:600;color:#262b31;display:-webkit-box;
+  -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
+.pc .mt{font-size:.7em;color:#7b858f;margin-top:3px;display:block}
+.pc .eng{font-size:.86em;font-weight:800;color:#febf0f;flex-shrink:0}
+.pc:hover .cap{text-decoration:underline}
+/* ---------- nav ---------- */
+nav{display:flex;gap:8px;margin-top:14px;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;padding:2px;background:#eceff3}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;text-decoration:none;font-size:.78em;font-weight:700;padding:8px 14px;
+  border-radius:999px;background:#fff;color:#46505a;border:1px solid #d6dbe1}
+nav a.cur{background:#febf0f;color:#3d2f00;border-color:transparent}
+pagehead{display:flex;align-items:center;gap:12px;padding:20px 4px 0}
+pagehead img.logo{width:46px;height:46px;border-radius:12px;background:#fff;padding:5px}
+pagehead .t{font-weight:800;font-size:1.15em}
+pagehead .s{font-size:.78em;color:#5c666f}
+footer{text-align:center;color:#8a939d;font-size:.75em;margin-top:26px}
+footer a{color:#46505a}
 </style></head><body>
-<div class="wrap">
-<div class="masthead">
-  <div class="mhead-row">
-    <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/tss.png" alt="THE SECRET SAUCE">
-    <div><h1>THE SECRET SAUCE</h1>
-      <div class="sub">รายงานดิจิทัลประจำสัปดาห์ · 11-17 ส.ค. 2026</div></div>
-    <div class="week-pill"><b>2026-W34</b>อัปเดต<br>ทุกสัปดาห์</div>
+<div class="page">
+  <pagehead>
+    <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/tss.png" alt="">
+    <div><div class="t">THE SECRET SAUCE</div>
+      <div class="s">รายงานดิจิทัลประจำสัปดาห์ · 11-17 ส.ค. 2026 · 2026-W34</div></div>
+  </pagehead>
+  <nav><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/news.html">NEWS</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/wealth.html">WEALTH</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/pop.html">POP</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/life.html">LIFE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/sport.html">SPORT</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/knd.html">KND</a><a class="cur" href="https://tsd-pengpis.github.io/digital-report/2026-W34/tss.html">SECRET SAUCE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/podcast.html">PODCAST</a></nav>
+  <main>
+    
+<div class="bubble hero-bubble">
+  <div class="hd" style="background:linear-gradient(135deg,#febf0f 0%,#fecf4b 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""></span>
+    <span class="t">คอนเทนต์เด่นประจำสัปดาห์</span>
+    <span class="badge" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)">#1 ของบ้าน</span>
+  </div>
+  <img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W34/img/tss.jpg" alt="">
+  <div class="bd">
+    <div class="feat">
+      <div class="fcap">ในวันที่คลิปไวรัล...แบรนด์ควรทำอะไร ? . What&#x27;s Your Secret พาไปฟังจุดเปลี่ยนชีวิตของ Codec.Creation เมื่อ…</div>
+      <div class="fmeta">TikTok · 8/11/26, 12:01 PM · <a class="pc-open" href="https://www.tiktok.com/@thesecretsauceth/video/7672634725227449618" target="_blank">เปิด →</a>
+        <span class="fban" style="background:#fff7e0;color:#febf0f">
+          6,434 engagement</span></div>
+    </div>
   </div>
 </div>
-<nav><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/news.html">NEWS</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/wealth.html">WEALTH</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/pop.html">POP</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/life.html">LIFE</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/sport.html">SPORT</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/knd.html">KND</a><a class="cur" style="background:#febf0f;color:#3d2f00;border-color:transparent" href="https://tsd-pengpis.github.io/digital-report/2026-W34/tss.html">SECRET SAUCE</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/podcast.html">PODCAST</a></nav>
-<div class="hero-wrap"><img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W34/img/tss.jpg" alt=""><div class="hero-veil"></div><div class="badge1" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt="">คอนเทนต์เด่น #1 ของบ้าน</div><div class="hero-cap"><b>ในวันที่คลิปไวรัล...แบรนด์ควรทำอะไร ? . What&#x27;s Your Secret พาไปฟั…</b><span><img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt="">TikTok · 8/11/26, 12:01 PM · <b>6,434</b> engagement</span></div></div>
-
-<div class="card">
-  <div class="card-hd" style="background:linear-gradient(135deg,#c4302b 0%,#d36460 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/youtube_white.png" alt=""><span>YouTube</span>
-    <span class="card-rank"><b>10</b>/11 ในลีก</span>
+    
+<div class="bubble take-bubble">
+  <div class="bd">
+    <div class="take">
+      <div class="take-l">อ่านเร็วสำหรับทีม · สัปดาห์ 2026-W34</div>
+      <div class="take-l">• แพลตฟอร์มที่แรงที่สุด: TikTok อันดับ 4/7 ของลีก</div><div class="take-l">• ผู้ติดตามโตสุด: TikTok +3,753 สัปดาห์นี้</div>
+    </div>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="v">1,450,000</div><div class="l">ผู้ติดตาม</div></div>
-    <div class="stat"><div class="v">21</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>+299</div><div class="l">ติดตามสัปดาห์นี้</div></div>
-    <div class="stat accent"><div class="v" style="color:#febf0f">2.5K</div>
-    <div class="l">คนดู/โพสต์</div></div>
-  </div>
-  <div class="scroll"><table>
-    <tr><th>#</th><th>เพจ</th><th class="r">คนดูเฉลี่ยต่อชิ้น</th></tr>
-    <tr><td class="n">1</td><td class="pname">I am Joe Jitnarin<div class="bar"><i style="width:100%"></i></div></td><td class="n">40,300</td></tr><tr><td class="n">2</td><td class="pname">CK Cheong<div class="bar"><i style="width:73%"></i></div></td><td class="n">29,585</td></tr><tr><td class="n">3</td><td class="pname">Sai_MoneyMonster<div class="bar"><i style="width:71%"></i></div></td><td class="n">28,684</td></tr><tr><td class="n">4</td><td class="pname">ลงทุนแมน<div class="bar"><i style="width:48%"></i></div></td><td class="n">19,318</td></tr><tr><td class="n">5</td><td class="pname">BLACK DOT<div class="bar"><i style="width:23%"></i></div></td><td class="n">9,085</td></tr><tr><td class="n">6</td><td class="pname">Torpenguin<div class="bar"><i style="width:20%"></i></div></td><td class="n">7,943</td></tr><tr><td class="n">7</td><td class="pname">Mission To The Moon<div class="bar"><i style="width:18%"></i></div></td><td class="n">7,080</td></tr><tr><td class="n">8</td><td class="pname">NopPongsatorn<div class="bar"><i style="width:14%"></i></div></td><td class="n">5,578</td></tr><tr><td class="n">9</td><td class="pname">กรุงเทพธุรกิจ<div class="bar"><i style="width:12%"></i></div></td><td class="n">4,980</td></tr><tr class="us"><td class="n">10</td><td class="pname">THE SECRET SAUCE<span class="rankb">★</span><div class="bar"><i style="width:6%"></i></div></td><td class="n">2,472</td></tr><tr><td class="n">11</td><td class="pname">THE INSIDER - ดิ อินไซเดอร์<div class="bar"><i style="width:1%"></i></div></td><td class="n">247</td></tr>
-  </table></div>
 </div>
-<div class="card">
-  <div class="card-hd" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""><span>Facebook</span>
-    <span class="card-rank"><b>12</b>/12 ในลีก</span>
+    
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#c4302b 0%,#d36460 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/youtube_white.png" alt=""></span>
+    <span class="t">YouTube</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">10/11 ในลีก</span>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="v">701,265</div><div class="l">ผู้ติดตาม</div></div>
-    <div class="stat"><div class="v">31</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>+2,793</div><div class="l">ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">482,853</div><div class="l">คนเห็น/วัน</div></div>
-    <div class="stat accent"><div class="v" style="color:#febf0f">132</div>
-    <div class="l">RCS/โพสต์</div></div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">1,450,000</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">21</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +299</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#febf0f">2.5K</div><div class="l">คนดู/โพสต์</div></div>
+    </div>
+    <div class="mlabel">คนดูเฉลี่ยต่อชิ้น</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">I am Joe Jitnarin</span><div class="bar"><i style="width:100%"></i></div><span class="vl">40,300</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">CK Cheong</span><div class="bar"><i style="width:73%"></i></div><span class="vl">29,585</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Sai_MoneyMonster</span><div class="bar"><i style="width:71%"></i></div><span class="vl">28,684</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">ลงทุนแมน</span><div class="bar"><i style="width:48%"></i></div><span class="vl">19,318</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">BLACK DOT</span><div class="bar"><i style="width:23%"></i></div><span class="vl">9,085</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">Torpenguin</span><div class="bar"><i style="width:20%"></i></div><span class="vl">7,943</span></div><div class="lb-row"><span class="rk">7</span><span class="nm">Mission To The Moon</span><div class="bar"><i style="width:18%"></i></div><span class="vl">7,080</span></div><div class="lb-row"><span class="rk">8</span><span class="nm">NopPongsatorn</span><div class="bar"><i style="width:14%"></i></div><span class="vl">5,578</span></div><div class="lb-row"><span class="rk">9</span><span class="nm">กรุงเทพธุรกิจ</span><div class="bar"><i style="width:12%"></i></div><span class="vl">4,980</span></div><div class="lb-row us"><span class="rk">10</span><span class="nm">THE SECRET SAUCE<span class="star">★</span></span><div class="bar"><i style="width:6%"></i></div><span class="vl">2,472</span></div><div class="lb-row"><span class="rk">11</span><span class="nm">THE INSIDER - ดิ อินไซเดอร์</span><div class="bar"><i style="width:1%"></i></div><span class="vl">247</span></div></div>
+    
   </div>
-  <div class="scroll"><table>
-    <tr><th>#</th><th>เพจ</th><th class="r">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
-    <tr><td class="n">1</td><td class="pname">CK Cheong, CPA<div class="bar"><i style="width:100%"></i></div></td><td class="n">3,673</td></tr><tr><td class="n">2</td><td class="pname">BrandThink<div class="bar"><i style="width:76%"></i></div></td><td class="n">2,799</td></tr><tr><td class="n">3</td><td class="pname">Brand Inside<div class="bar"><i style="width:61%"></i></div></td><td class="n">2,240</td></tr><tr><td class="n">4</td><td class="pname">เขียนไว้ให้เธอ<div class="bar"><i style="width:39%"></i></div></td><td class="n">1,419</td></tr><tr><td class="n">5</td><td class="pname">ลงทุนแมน<div class="bar"><i style="width:21%"></i></div></td><td class="n">780</td></tr><tr><td class="n">6</td><td class="pname">Mission To The Moon<div class="bar"><i style="width:15%"></i></div></td><td class="n">534</td></tr><tr><td class="n">7</td><td class="pname">กรุงเทพธุรกิจ<div class="bar"><i style="width:9%"></i></div></td><td class="n">340</td></tr><tr><td class="n">8</td><td class="pname">ลงทุนเกิร์ล<div class="bar"><i style="width:9%"></i></div></td><td class="n">326</td></tr><tr><td class="n">9</td><td class="pname">Techsauce<div class="bar"><i style="width:7%"></i></div></td><td class="n">241</td></tr><tr><td class="n">10</td><td class="pname">Nop Pongsatorn<div class="bar"><i style="width:6%"></i></div></td><td class="n">219</td></tr><tr><td class="n">11</td><td class="pname">ท๊อป จิรายุส - Topp Jirayut<div class="bar"><i style="width:4%"></i></div></td><td class="n">142</td></tr><tr class="us"><td class="n">12</td><td class="pname">The Secret Sauce<span class="rankb">★</span><div class="bar"><i style="width:4%"></i></div></td><td class="n">132</td></tr>
-  </table></div>
 </div>
-<div class="card">
-  <div class="card-hd" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""><span>TikTok</span>
-    <span class="card-rank"><b>4</b>/7 ในลีก</span>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+    <span class="t">Facebook</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">12/12 ในลีก</span>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="v">670,383</div><div class="l">ผู้ติดตาม</div></div>
-    <div class="stat"><div class="v">18</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>~+3,753</div><div class="l">ติดตามสัปดาห์นี้</div></div>
-    <div class="stat accent"><div class="v" style="color:#febf0f">8.4K</div>
-    <div class="l">คนดู/โพสต์</div></div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">701,265</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">31</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +2,793</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#febf0f">132</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">CK Cheong, CPA</span><div class="bar"><i style="width:100%"></i></div><span class="vl">3,673</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">BrandThink</span><div class="bar"><i style="width:76%"></i></div><span class="vl">2,799</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Brand Inside</span><div class="bar"><i style="width:61%"></i></div><span class="vl">2,240</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">เขียนไว้ให้เธอ</span><div class="bar"><i style="width:39%"></i></div><span class="vl">1,419</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">ลงทุนแมน</span><div class="bar"><i style="width:21%"></i></div><span class="vl">780</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">Mission To The Moon</span><div class="bar"><i style="width:15%"></i></div><span class="vl">534</span></div><div class="lb-row"><span class="rk">7</span><span class="nm">กรุงเทพธุรกิจ</span><div class="bar"><i style="width:9%"></i></div><span class="vl">340</span></div><div class="lb-row"><span class="rk">8</span><span class="nm">ลงทุนเกิร์ล</span><div class="bar"><i style="width:9%"></i></div><span class="vl">326</span></div><div class="lb-row"><span class="rk">9</span><span class="nm">Techsauce</span><div class="bar"><i style="width:7%"></i></div><span class="vl">241</span></div><div class="lb-row"><span class="rk">10</span><span class="nm">Nop Pongsatorn</span><div class="bar"><i style="width:6%"></i></div><span class="vl">219</span></div><div class="lb-row"><span class="rk">11</span><span class="nm">ท๊อป จิรายุส - Topp Jirayut</span><div class="bar"><i style="width:4%"></i></div><span class="vl">142</span></div><div class="lb-row us"><span class="rk">12</span><span class="nm">The Secret Sauce<span class="star">★</span></span><div class="bar"><i style="width:4%"></i></div><span class="vl">132</span></div></div>
+    
   </div>
-  <div class="scroll"><table>
-    <tr><th>#</th><th>เพจ</th><th class="r">คนดูเฉลี่ยต่อชิ้น</th></tr>
-    <tr><td class="n">1</td><td class="pname">Ckfastwork<div class="bar"><i style="width:100%"></i></div></td><td class="n">172,342</td></tr><tr><td class="n">2</td><td class="pname">Mission To The Moon<div class="bar"><i style="width:17%"></i></div></td><td class="n">28,974</td></tr><tr><td class="n">3</td><td class="pname">ลงทุนแมน<div class="bar"><i style="width:6%"></i></div></td><td class="n">10,919</td></tr><tr class="us"><td class="n">4</td><td class="pname">THE SECRET SAUCE<span class="rankb">★</span><div class="bar"><i style="width:5%"></i></div></td><td class="n">8,425</td></tr><tr><td class="n">5</td><td class="pname">กรุงเทพธุรกิจ<div class="bar"><i style="width:4%"></i></div></td><td class="n">6,872</td></tr><tr><td class="n">6</td><td class="pname">Brand Inside<div class="bar"><i style="width:2%"></i></div></td><td class="n">3,949</td></tr><tr><td class="n">7</td><td class="pname">ลงทุนเกิร์ล<div class="bar"><i style="width:1%"></i></div></td><td class="n">1,300</td></tr>
-  </table></div><div class="note">⏭️ ข้าม 3 เพจที่ไม่ได้โพสต์: Nop Pongsatorn (ไม่ได้โพสต์ในช่วงนี้), MarketThink (ไม่ได้โพสต์ในช่วงนี้), Topp Jirayut Official (ไม่ได้โพสต์ในช่วงนี้)</div>
 </div>
-<div class="card">
-  <div class="card-hd" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""><span>Instagram</span>
-    <span class="card-rank"><b>7</b>/10 ในลีก</span>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""></span>
+    <span class="t">TikTok</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">4/7 ในลีก</span>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="v">172,889</div><div class="l">ผู้ติดตาม</div></div>
-    <div class="stat"><div class="v">28</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>+1,400</div><div class="l">ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">133,829</div><div class="l">คนเห็น/วัน</div></div>
-    <div class="stat accent"><div class="v" style="color:#febf0f">394</div>
-    <div class="l">RCS/โพสต์</div></div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">670,383</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">18</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ ~+3,753</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#febf0f">8.4K</div><div class="l">คนดู/โพสต์</div></div>
+    </div>
+    <div class="mlabel">คนดูเฉลี่ยต่อชิ้น</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">Ckfastwork</span><div class="bar"><i style="width:100%"></i></div><span class="vl">172,342</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Mission To The Moon</span><div class="bar"><i style="width:17%"></i></div><span class="vl">28,974</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">ลงทุนแมน</span><div class="bar"><i style="width:6%"></i></div><span class="vl">10,919</span></div><div class="lb-row us"><span class="rk">4</span><span class="nm">THE SECRET SAUCE<span class="star">★</span></span><div class="bar"><i style="width:5%"></i></div><span class="vl">8,425</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">กรุงเทพธุรกิจ</span><div class="bar"><i style="width:4%"></i></div><span class="vl">6,872</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">Brand Inside</span><div class="bar"><i style="width:2%"></i></div><span class="vl">3,949</span></div><div class="lb-row"><span class="rk">7</span><span class="nm">ลงทุนเกิร์ล</span><div class="bar"><i style="width:1%"></i></div><span class="vl">1,300</span></div></div>
+    <div class="warn">⏭️ ข้าม 3 เพจที่ไม่ได้โพสต์</div>
   </div>
-  <div class="scroll"><table>
-    <tr><th>#</th><th>เพจ</th><th class="r">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
-    <tr><td class="n">1</td><td class="pname">Chikit Cheong, CPA<div class="bar"><i style="width:100%"></i></div></td><td class="n">20,682</td></tr><tr><td class="n">2</td><td class="pname">MarketThink<div class="bar"><i style="width:5%"></i></div></td><td class="n">1,048</td></tr><tr><td class="n">3</td><td class="pname">Mission To The Moon<div class="bar"><i style="width:4%"></i></div></td><td class="n">869</td></tr><tr><td class="n">4</td><td class="pname">ลงทุนแมน<div class="bar"><i style="width:4%"></i></div></td><td class="n">774</td></tr><tr><td class="n">5</td><td class="pname">Brand Inside<div class="bar"><i style="width:3%"></i></div></td><td class="n">723</td></tr><tr><td class="n">6</td><td class="pname">ลงทุนเกิร์ล<div class="bar"><i style="width:2%"></i></div></td><td class="n">401</td></tr><tr class="us"><td class="n">7</td><td class="pname">The Secret Sauce<span class="rankb">★</span><div class="bar"><i style="width:2%"></i></div></td><td class="n">394</td></tr><tr><td class="n">8</td><td class="pname">กรุงเทพธุรกิจ<div class="bar"><i style="width:2%"></i></div></td><td class="n">394</td></tr><tr><td class="n">9</td><td class="pname">Topp Jirayut Srupsrisopa™<div class="bar"><i style="width:1%"></i></div></td><td class="n">212</td></tr><tr><td class="n">10</td><td class="pname">NopPongsatorn<div class="bar"><i style="width:0%"></i></div></td><td class="n">3</td></tr>
-  </table></div>
 </div>
-<div class="card"><div class="card-hd" style="background:linear-gradient(135deg,#febf0f 0%,#fecc3f 100%)">
-  <span>คอนเทนต์เด่นของ SECRET SAUCE สัปดาห์นี้</span>
-  <span class="card-rank">Top 6</span></div>
-<div class="postlist">
-
-<div class="post">
-  <div class="pnum"><b>2</b></div>
-  <div class="picon" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></div>
-  <div class="pbody">
-    <div class="ptitle">ในวันที่คลิปไวรัล...แบรนด์ควรทำอะไร? What&#x27;s Your Secret พาไปฟังจุดเปลี่ยนชีวิตของ Cod…</div>
-    <div class="pmeta">Instagram · 8/11/26, 12:02 PM</div>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+    <span class="t">Instagram</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">7/10 ในลีก</span>
   </div>
-  <div class="peng" style="color:#febf0f"><b>3,179</b><a class="pm-open" href="https://www.instagram.com/reel/Db4yi91AFPP/" target="_blank">เปิด →</a></div>
-</div>
-<div class="post">
-  <div class="pnum"><b>3</b></div>
-  <div class="picon" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></div>
-  <div class="pbody">
-    <div class="ptitle">Wellness กำลังโต แต่ธุรกิจที่โตไปพร้อมกับตลาด อาจไม่ใช่ธุรกิจที่วิ่งตามทุกเทรนด์ เมื่อ Cro…</div>
-    <div class="pmeta">Instagram · 8/17/26, 3:01 PM</div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">172,889</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">28</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +1,400</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#febf0f">394</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">Chikit Cheong, CPA</span><div class="bar"><i style="width:100%"></i></div><span class="vl">20,682</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">MarketThink</span><div class="bar"><i style="width:5%"></i></div><span class="vl">1,048</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Mission To The Moon</span><div class="bar"><i style="width:4%"></i></div><span class="vl">869</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">ลงทุนแมน</span><div class="bar"><i style="width:4%"></i></div><span class="vl">774</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">Brand Inside</span><div class="bar"><i style="width:3%"></i></div><span class="vl">723</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">ลงทุนเกิร์ล</span><div class="bar"><i style="width:2%"></i></div><span class="vl">401</span></div><div class="lb-row us"><span class="rk">7</span><span class="nm">The Secret Sauce<span class="star">★</span></span><div class="bar"><i style="width:2%"></i></div><span class="vl">394</span></div><div class="lb-row"><span class="rk">8</span><span class="nm">กรุงเทพธุรกิจ</span><div class="bar"><i style="width:2%"></i></div><span class="vl">394</span></div><div class="lb-row"><span class="rk">9</span><span class="nm">Topp Jirayut Srupsrisopa™</span><div class="bar"><i style="width:1%"></i></div><span class="vl">212</span></div><div class="lb-row"><span class="rk">10</span><span class="nm">NopPongsatorn</span><div class="bar"><i style="width:0%"></i></div><span class="vl">3</span></div></div>
+    
   </div>
-  <div class="peng" style="color:#febf0f"><b>2,342</b><a class="pm-open" href="https://www.instagram.com/p/DcIj5o7jnyb/" target="_blank">เปิด →</a></div>
 </div>
-<div class="post">
-  <div class="pnum"><b>4</b></div>
-  <div class="picon" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></div>
-  <div class="pbody">
-    <div class="ptitle">เปิดไฮไลต์ 2 เวทีใหญ่! มาฟังใครได้บ้างในงาน 𝗧𝗛𝗘 𝗦𝗘𝗖𝗥𝗘𝗧 𝗦𝗔𝗨𝗖𝗘 𝗦𝗨𝗠𝗠𝗜𝗧 𝟮𝟬𝟮𝟲: 𝗧𝗛𝗘 𝗔𝗚𝗘 𝗢𝗙 𝗕𝗨𝗜𝗟𝗗…</div>
-    <div class="pmeta">Instagram · 8/11/26, 5:22 PM</div>
+    
+<div class="bubble posts-bubble">
+  <div class="hd" style="background:linear-gradient(135deg,#febf0f 0%,#fecc3f 100%)">
+    <span class="t">คอนเทนต์เด่น SECRET SAUCE สัปดาห์นี้</span>
+    <span class="badge" style="background:rgba(255,255,255,.2)">Top 5</span>
   </div>
-  <div class="peng" style="color:#febf0f"><b>1,127</b><a class="pm-open" href="https://www.instagram.com/p/Db5XUATjjuE/" target="_blank">เปิด →</a></div>
+  <div class="bd">
+<a class="pc" href="https://www.tiktok.com/@thesecretsauceth/video/7672634725227449618" target="_blank"><span class="rk">1</span><span class="plat-mini" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""></span>
+  <span class="body"><span class="cap">ในวันที่คลิปไวรัล...แบรนด์ควรทำอะไร ? . What&#x27;s Your Secret พาไปฟังจุดเปลี่ยนชีวิตของ Codec.Crea…</span>
+    <span class="mt">TikTok · 8/11/26, 12:01 PM</span></span>
+  <span class="eng">6,434</span></a>
+<a class="pc" href="https://www.instagram.com/reel/Db4yi91AFPP/" target="_blank"><span class="rk">2</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">ในวันที่คลิปไวรัล...แบรนด์ควรทำอะไร? What&#x27;s Your Secret พาไปฟังจุดเปลี่ยนชีวิตของ Codec.Creatio…</span>
+    <span class="mt">Instagram · 8/11/26, 12:02 PM</span></span>
+  <span class="eng">3,179</span></a>
+<a class="pc" href="https://www.instagram.com/p/DcIj5o7jnyb/" target="_blank"><span class="rk">3</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">Wellness กำลังโต แต่ธุรกิจที่โตไปพร้อมกับตลาด อาจไม่ใช่ธุรกิจที่วิ่งตามทุกเทรนด์ เมื่อ CrossFit, Spa…</span>
+    <span class="mt">Instagram · 8/17/26, 3:01 PM</span></span>
+  <span class="eng">2,342</span></a>
+<a class="pc" href="https://www.instagram.com/p/Db5XUATjjuE/" target="_blank"><span class="rk">4</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">เปิดไฮไลต์ 2 เวทีใหญ่! มาฟังใครได้บ้างในงาน 𝗧𝗛𝗘 𝗦𝗘𝗖𝗥𝗘𝗧 𝗦𝗔𝗨𝗖𝗘 𝗦𝗨𝗠𝗠𝗜𝗧 𝟮𝟬𝟮𝟲: 𝗧𝗛𝗘 𝗔𝗚𝗘 𝗢𝗙 𝗕𝗨𝗜𝗟𝗗𝗘𝗥𝗦 . ♟️ 𝙈…</span>
+    <span class="mt">Instagram · 8/11/26, 5:22 PM</span></span>
+  <span class="eng">1,127</span></a>
+<a class="pc" href="https://www.facebook.com/reel/1405995664727032/" target="_blank"><span class="rk">5</span><span class="plat-mini" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+  <span class="body"><span class="cap">ในวันที่คลิปไวรัล...แบรนด์ควรทำอะไร ? . What&#x27;s Your Secret พาไปฟังจุดเปลี่ยนชีวิตของ Codec.Crea…</span>
+    <span class="mt">Facebook · 8/11/26, 12:01 PM</span></span>
+  <span class="eng">1,028</span></a></div>
 </div>
-<div class="post">
-  <div class="pnum"><b>5</b></div>
-  <div class="picon" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></div>
-  <div class="pbody">
-    <div class="ptitle">ในวันที่คลิปไวรัล...แบรนด์ควรทำอะไร ? . What&#x27;s Your Secret พาไปฟังจุดเปลี่ยนชีวิตของ …</div>
-    <div class="pmeta">Facebook · 8/11/26, 12:01 PM</div>
-  </div>
-  <div class="peng" style="color:#febf0f"><b>1,028</b><a class="pm-open" href="https://www.facebook.com/reel/1405995664727032/" target="_blank">เปิด →</a></div>
-</div>
-</div></div>
-<footer>ข้อมูล: <b>Fanpage Karma</b> · สร้างอัตโนมัติทุกสัปดาห์ ·
-<a href="https://tsd-pengpis.github.io/digital-report/">TSD Digital Report ทุกบ้าน</a></footer>
+  </main>
+  <footer>ข้อมูล: <b style="color:#febf0f">Fanpage Karma</b> · สร้างอัตโนมัติ ·
+  <a href="https://tsd-pengpis.github.io/digital-report/">TSD Digital Report ทุกบ้าน</a></footer>
 </div></body></html>

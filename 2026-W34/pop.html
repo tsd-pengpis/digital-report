@@ -4,246 +4,232 @@
 <title>THE STANDARD POP · รายงานประจำสัปดาห์ 2026-W34</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans Thai',sans-serif;
-  color:#1f2328;line-height:1.55;min-height:100vh;background:
-  linear-gradient(180deg,#e0e0ff 0%,#f7f7ff 260px,#f2f4f7 700px)}
-.wrap{max-width:1000px;margin:0 auto;padding:0 14px 48px}
-/* ---------- masthead (มือถือ: โลโก้+ชื่อ+week ซ้อน) ---------- */
-.masthead{background:linear-gradient(135deg,#0000fe 0%,#4040fe 100%);
-  border-radius:0 0 26px 26px;padding:22px 18px 24px;color:#ffffff;
-  position:relative;overflow:hidden;box-shadow:0 8px 26px #7373fe }
-.masthead::before,.masthead::after{content:'';position:absolute;border-radius:50%;
-  pointer-events:none}
-.masthead::before{width:190px;height:190px;top:-70px;right:-60px;
-  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.16),transparent 70%)}
-.masthead::after{width:130px;height:130px;bottom:-55px;left:-35px;
-  background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.10),transparent 70%)}
-.mhead-row{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
-.mhead-row img.logo{width:62px;height:62px;border-radius:16px;background:#fff;
-  padding:7px;box-shadow:0 4px 14px rgba(0,0,0,.18);flex-shrink:0}
-.mhead-row h1{font-size:1.3em;line-height:1.15;letter-spacing:.01em}
-.mhead-row .sub{opacity:.9;font-size:.82em;margin-top:3px}
-.week-pill{margin-left:auto;flex-shrink:0;text-align:center;background:rgba(255,255,255,.15);
-  border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:6px 10px;font-size:.68em;
-  backdrop-filter:blur(4px)}
-.week-pill b{display:block;font-size:1.5em;line-height:1}
-/* ---------- nav scroll แนวนอน (มือถือ) ---------- */
-nav{display:flex;gap:8px;margin:16px 0 4px;overflow-x:auto;scrollbar-width:none;
-  -webkit-overflow-scrolling:touch;padding:2px}
-nav::-webkit-scrollbar{display:none}
-nav a{flex:0 0 auto;text-decoration:none;font-size:.78em;font-weight:700;
-  padding:8px 14px;border-radius:999px;background:#fff;color:#46505a;
-  border:1px solid #d6dbe1;transition:transform .12s ease,box-shadow .12s ease}
-nav a:active{transform:scale(.95)}
-nav a.cur{box-shadow:0 4px 12px #9999ff}
-/* ---------- การ์ด ---------- */
-.card{background:#fff;border-radius:18px;margin-top:16px;overflow:hidden;
-  box-shadow:0 4px 16px rgba(16,24,40,.10);border-top:5px solid #0000fe}
-.card-hd{display:flex;align-items:center;gap:10px;padding:13px 16px;color:#fff;
-  box-shadow:inset 0 -2px 0 rgba(255,255,255,.18)}
-.card-hd img{width:22px;height:22px}
-.card-hd>span{font-weight:800;font-size:1.02em}
-.card-hd .card-rank{margin-left:auto;font-size:.72em;font-weight:600;opacity:.95;
-  text-align:right;background:rgba(255,255,255,.16);padding:3px 9px;border-radius:999px}
-.card-hd .card-rank b{font-size:1.25em}
-/* ---------- stats grid (มือถือ 2 คอลัมน์) ---------- */
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:14px 14px 6px}
-.stat{background:linear-gradient(160deg,#d1d1ff 0%,#f0f0ff 100%);
-  border-radius:14px;padding:12px 13px;border-left:4px solid #0000fe;position:relative}
-.stat .v{font-size:1.3em;font-weight:800;font-variant-numeric:tabular-nums}
-.stat .v.up{color:#146c2e} .stat .v.down{color:#b3261e}
-.stat .v .ic-arrow{font-size:.7em;margin-right:2px}
-.stat .l{font-size:.68em;color:#5b6670;margin-top:3px;font-weight:600}
-.stat.accent{background:linear-gradient(160deg,#8c8cff 0%,#d9d9ff 100%);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}
-/* ---------- ตาราง comp + progress bar ---------- */
-.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-table{width:100%;border-collapse:collapse;font-size:.88em;min-width:340px}
-th,td{text-align:left;padding:9px 12px;border-bottom:1px solid #eef1f5;vertical-align:middle}
-th{background:#ebebff;font-size:.82em;color:#3d4750;position:sticky;top:0}
-th.r,td.n{text-align:right;font-variant-numeric:tabular-nums}
-td.pname{min-width:170px}
-.rankb{color:#0000fe;font-size:.9em;margin-left:5px}
-.bar{height:5px;background:#edf0f4;border-radius:99px;margin-top:5px;overflow:hidden}
-.bar i{display:block;height:100%;border-radius:99px;
-  background:linear-gradient(90deg,#0000fe,#7373fe)}
-tr.us{background:#e0e0ff;font-weight:700;border-left:4px solid #0000fe}
-tr.us td:first-child::after{content:' ★';color:#0000fe;font-size:.85em}
-.note{font-size:.76em;color:#7b858f;padding:9px 16px 14px}
-/* ---------- hero ---------- */
-.hero-wrap{position:relative;margin-top:16px;border-radius:20px;overflow:hidden;
-  box-shadow:0 8px 22px rgba(16,24,40,.18)}
-.hero-img{width:100%;aspect-ratio:20/13;object-fit:cover;display:block}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,
-  rgba(8,12,20,0) 35%,rgba(8,12,20,.82) 100%)}
-.badge1{position:absolute;top:12px;left:12px;color:#fff;font-weight:800;font-size:.78em;
-  padding:7px 13px;border-radius:999px;box-shadow:0 3px 12px rgba(0,0,0,.35);
-  display:flex;align-items:center;gap:7px;z-index:2}
-.badge1 img{width:17px;height:17px}
-.hero-cap{position:absolute;left:14px;right:14px;bottom:12px;z-index:2;color:#fff}
-.hero-cap b{display:block;font-size:.98em;line-height:1.35;text-shadow:0 1px 6px rgba(0,0,0,.5)}
-.hero-cap span{display:flex;align-items:center;gap:6px;font-size:.7em;opacity:.92;margin-top:5px}
-.hero-cap span img{width:14px;height:14px}
-/* ---------- รายการโพสต์ (การ์ด) ---------- */
-.postlist{display:flex;flex-direction:column;gap:10px;padding:12px 14px 16px}
-.post{display:flex;align-items:center;gap:11px;background:#f8fafc;
-  border:1px solid #e7ebf0;border-radius:14px;padding:10px 12px;
-  transition:transform .12s ease,box-shadow .12s ease}
-.post:active{transform:scale(.985)}
-.pnum{flex:0 0 auto;width:22px;height:22px;border-radius:8px;background:#e6e6ff;
-  color:#0000fe;display:flex;align-items:center;justify-content:center;font-size:.78em}
-.picon{flex:0 0 auto;width:34px;height:34px;border-radius:11px;display:flex;
-  align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(16,24,40,.22)}
-.picon img{width:18px;height:18px}
-.pbody{flex:1;min-width:0}
-.ptitle{font-size:.88em;font-weight:600;color:#262b31;display:-webkit-box;
-  -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
-.pmeta{font-size:.7em;color:#7b858f;margin-top:3px}
-.peng{flex:0 0 auto;text-align:right;font-size:.86em;display:flex;flex-direction:column;
-  align-items:flex-end;gap:2px}
-.pm-open{font-size:.68em;color:#0000fe;font-weight:700;text-decoration:none}
-/* ---------- พื้นฐาน desktop ---------- */
-@media (min-width:720px){
-  .wrap{padding:0 20px 56px}
-  .masthead{padding:28px 30px 30px;border-radius:0 0 30px 30px}
-  .mhead-row img.logo{width:76px;height:76px;padding:8px}
-  .mhead-row h1{font-size:1.7em}
-  .stats{grid-template-columns:repeat(4,1fr)}
-  nav a{padding:9px 16px;font-size:.8em}
-  nav a:hover{transform:translateY(-2px)}
-  .post:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(16,24,40,.12)}
+  color:#1f2328;line-height:1.5;background:#eceff3;min-height:100vh}
+.page{max-width:1000px;margin:0 auto;padding:0 12px 40px}
+h1{font-size:1.3em;margin-bottom:6px}
+/* ---------- masthead (การ์ดหัวบ้าน) ---------- */
+.bubble{background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 2px 10px rgba(16,24,40,.09)}
+.hd{display:flex;align-items:center;gap:10px;padding:13px 16px;color:#fff}
+.hd .plat{width:28px;height:28px;border-radius:8px;display:flex;flex-shrink:0;
+  align-items:center;justify-content:center}
+.hd .plat img{width:16px;height:16px;display:block}
+.hd .t{font-weight:800;flex:1;min-width:0;font-size:.98em}
+.hd .badge{font-size:.72em;font-weight:800;padding:4px 9px;border-radius:11px;
+  flex-shrink:0;white-space:nowrap}
+main{display:grid;gap:14px;margin-top:14px}
+.hero-bubble .hero-img{width:100%;aspect-ratio:20/13;object-fit:cover;display:block}
+.hero-bubble.no-pic .bd{padding-top:14px}
+.bd{padding:12px 16px 14px}
+.feat .fcap{font-size:.95em;font-weight:700;line-height:1.45}
+.feat .fmeta{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:8px;
+  font-size:.76em;color:#5c666f}
+.fban{font-size:.78em;font-weight:800;padding:3px 10px;border-radius:11px;margin-left:auto}
+.pc-open{color:#0000fe;font-weight:700;text-decoration:none}
+/* ---------- cards grid: desktop 2 คอล ---------- */
+@media (min-width:640px){
+  main{grid-template-columns:repeat(2,1fr)}
+  .hero-bubble,.take-bubble,.posts-bubble{grid-column:1/-1}
 }
-footer{text-align:center;color:#8a939d;font-size:.76em;margin-top:28px;line-height:1.7}
-footer b{color:#0000fe}
-footer a{color:#0000fe;font-weight:700;text-decoration:none}
+/* ---------- stats แถว ---------- */
+.st{display:flex;gap:8px}
+.st .c{flex:1;min-width:0;text-align:left;background:#f7f9fb;border-radius:10px;
+  padding:9px 10px}
+.st .c .n{font-size:1.02em;font-weight:800;font-variant-numeric:tabular-nums}
+.st .c .n.v-up{color:#146c2e} .st .c .n.v-down{color:#b3261e}
+.st .c .l{font-size:.63em;color:#7b858f;margin-top:2px;white-space:nowrap}
+.mlabel{font-size:.7em;color:#7b858f;margin:8px 2px 0;font-weight:600}
+/* ---------- leaderboard ---------- */
+.lb{margin-top:8px}
+.lb-row{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:8px}
+.lb-row .rk{width:18px;font-size:.76em;color:#9aa3ab;font-weight:800;flex-shrink:0}
+.lb-row .nm{flex:1;min-width:0;font-size:.8em;color:#46505a;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.lb-row .star{color:#0000fe;margin-left:4px}
+.lb-row .bar{flex:1;max-width:90px;height:5px;background:#eef1f5;border-radius:99px;
+  overflow:hidden}
+.lb-row .bar i{display:block;height:100%;border-radius:99px;
+  background:linear-gradient(90deg,#0000fe,#7373fe)}
+.lb-row .vl{font-size:.78em;font-weight:700;color:#46505a;flex-shrink:0;
+  font-variant-numeric:tabular-nums}
+.lb-row.us{background:#e6e6ff;font-weight:800}
+.lb-row.us .nm{color:#1f2328}
+.warn{background:#fdf3d7;border:1px solid #e8d089;color:#6b4e00;border-radius:8px;
+  padding:8px 10px;font-size:.74em;margin-top:10px}
+/* ---------- takeaway ---------- */
+.take{background:#f5f7f9;border-radius:10px;padding:12px 14px}
+.take-l{font-size:.82em;color:#3d4750;line-height:1.6;margin-top:6px}
+.take-l:first-child{font-weight:800;color:#0000fe;margin-top:0}
+/* ---------- โพสต์ ---------- */
+.pc{display:flex;align-items:center;gap:10px;padding:10px 0;text-decoration:none;
+  color:inherit;border-bottom:1px solid #eef1f5}
+.pc:last-child{border-bottom:none}
+.pc .rk{width:16px;font-size:.8em;font-weight:800;color:#c8ced5;flex-shrink:0}
+.pc .plat-mini{width:30px;height:30px;border-radius:9px;display:flex;flex-shrink:0;
+  align-items:center;justify-content:center}
+.pc .plat-mini img{width:16px;height:16px}
+.pc .body{flex:1;min-width:0}
+.pc .cap{font-size:.86em;font-weight:600;color:#262b31;display:-webkit-box;
+  -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
+.pc .mt{font-size:.7em;color:#7b858f;margin-top:3px;display:block}
+.pc .eng{font-size:.86em;font-weight:800;color:#0000fe;flex-shrink:0}
+.pc:hover .cap{text-decoration:underline}
+/* ---------- nav ---------- */
+nav{display:flex;gap:8px;margin-top:14px;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;padding:2px;background:#eceff3}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;text-decoration:none;font-size:.78em;font-weight:700;padding:8px 14px;
+  border-radius:999px;background:#fff;color:#46505a;border:1px solid #d6dbe1}
+nav a.cur{background:#0000fe;color:#ffffff;border-color:transparent}
+pagehead{display:flex;align-items:center;gap:12px;padding:20px 4px 0}
+pagehead img.logo{width:46px;height:46px;border-radius:12px;background:#fff;padding:5px}
+pagehead .t{font-weight:800;font-size:1.15em}
+pagehead .s{font-size:.78em;color:#5c666f}
+footer{text-align:center;color:#8a939d;font-size:.75em;margin-top:26px}
+footer a{color:#46505a}
 </style></head><body>
-<div class="wrap">
-<div class="masthead">
-  <div class="mhead-row">
-    <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/pop.png" alt="THE STANDARD POP">
-    <div><h1>THE STANDARD POP</h1>
-      <div class="sub">รายงานดิจิทัลประจำสัปดาห์ · 11-17 ส.ค. 2026</div></div>
-    <div class="week-pill"><b>2026-W34</b>อัปเดต<br>ทุกสัปดาห์</div>
+<div class="page">
+  <pagehead>
+    <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/pop.png" alt="">
+    <div><div class="t">THE STANDARD POP</div>
+      <div class="s">รายงานดิจิทัลประจำสัปดาห์ · 11-17 ส.ค. 2026 · 2026-W34</div></div>
+  </pagehead>
+  <nav><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/news.html">NEWS</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/wealth.html">WEALTH</a><a class="cur" href="https://tsd-pengpis.github.io/digital-report/2026-W34/pop.html">POP</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/life.html">LIFE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/sport.html">SPORT</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/knd.html">KND</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/tss.html">SECRET SAUCE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/podcast.html">PODCAST</a></nav>
+  <main>
+    
+<div class="bubble hero-bubble">
+  <div class="hd" style="background:linear-gradient(135deg,#0000fe 0%,#4040fe 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+    <span class="t">คอนเทนต์เด่นประจำสัปดาห์</span>
+    <span class="badge" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">#1 ของบ้าน</span>
+  </div>
+  <img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W34/img/pop.jpg" alt="">
+  <div class="bd">
+    <div class="feat">
+      <div class="fcap">UPDATE: ซี ทวินันท์ ขึ้นแคมเปญ Calvin Klein ระดับเอเชียครั้งแรก Calvin Klein เปิดตัวแคมเปญประจำฤดูกาล Fall 202…</div>
+      <div class="fmeta">Facebook · 8/11/26, 9:27 AM · <a class="pc-open" href="https://www.facebook.com/621730003317922/posts/1516538583837055" target="_blank">เปิด →</a>
+        <span class="fban" style="background:#dedeff;color:#0000fe">
+          22,803 engagement</span></div>
+    </div>
   </div>
 </div>
-<nav><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/news.html">NEWS</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/wealth.html">WEALTH</a><a class="cur" style="background:#0000fe;color:#ffffff;border-color:transparent" href="https://tsd-pengpis.github.io/digital-report/2026-W34/pop.html">POP</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/life.html">LIFE</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/sport.html">SPORT</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/knd.html">KND</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/tss.html">SECRET SAUCE</a><a class="" style="" href="https://tsd-pengpis.github.io/digital-report/2026-W34/podcast.html">PODCAST</a></nav>
-<div class="hero-wrap"><img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W34/img/pop.jpg" alt=""><div class="hero-veil"></div><div class="badge1" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt="">คอนเทนต์เด่น #1 ของบ้าน</div><div class="hero-cap"><b>UPDATE: ซี ทวินันท์ ขึ้นแคมเปญ Calvin Klein ระดับเอเชียครั้งแรก Calvin…</b><span><img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt="">Facebook · 8/11/26, 9:27 AM · <b>22,803</b> engagement</span></div></div>
-
-<div class="card">
-  <div class="card-hd" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""><span>Facebook</span>
-    <span class="card-rank"><b>1</b>/6 ในลีก</span>
+    
+<div class="bubble take-bubble">
+  <div class="bd">
+    <div class="take">
+      <div class="take-l">อ่านเร็วสำหรับทีม · สัปดาห์ 2026-W34</div>
+      <div class="take-l">• แพลตฟอร์มที่แรงที่สุด: Facebook อันดับ 1/6 ของลีก</div><div class="take-l">• ผู้ติดตามโตสุด: Facebook +1,556 สัปดาห์นี้</div>
+    </div>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="v">774,727</div><div class="l">ผู้ติดตาม</div></div>
-    <div class="stat"><div class="v">82</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>+1,556</div><div class="l">ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">494,937</div><div class="l">คนเห็น/วัน</div></div>
-    <div class="stat accent"><div class="v" style="color:#0000fe">907</div>
-    <div class="l">RCS/โพสต์</div></div>
-  </div>
-  <div class="scroll"><table>
-    <tr><th>#</th><th>เพจ</th><th class="r">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
-    <tr class="us"><td class="n">1</td><td class="pname">THE STANDARD POP<span class="rankb">★</span><div class="bar"><i style="width:100%"></i></div></td><td class="n">907</td></tr><tr><td class="n">2</td><td class="pname">Vogue Thailand<div class="bar"><i style="width:47%"></i></div></td><td class="n">422</td></tr><tr><td class="n">3</td><td class="pname">Harper&#x27;s BAZAAR Thailand<div class="bar"><i style="width:35%"></i></div></td><td class="n">313</td></tr><tr><td class="n">4</td><td class="pname">Mint Magazine Thailand<div class="bar"><i style="width:17%"></i></div></td><td class="n">158</td></tr><tr><td class="n">5</td><td class="pname">ELLE Thailand<div class="bar"><i style="width:8%"></i></div></td><td class="n">75</td></tr><tr><td class="n">6</td><td class="pname">WWD Thailand<div class="bar"><i style="width:3%"></i></div></td><td class="n">23</td></tr>
-  </table></div>
 </div>
-<div class="card">
-  <div class="card-hd" style="background:linear-gradient(135deg,#c4302b 0%,#d36460 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/youtube_white.png" alt=""><span>YouTube</span>
-    <span class="card-rank"><b>1</b>/4 ในลีก</span>
+    
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+    <span class="t">Facebook</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">1/6 ในลีก</span>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="v">341,000</div><div class="l">ผู้ติดตาม</div></div>
-    <div class="stat"><div class="v">1</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v down"><i class="ic-arrow">▼</i>-1,129</div><div class="l">ติดตามสัปดาห์นี้</div></div>
-    <div class="stat accent"><div class="v" style="color:#0000fe">7.8K</div>
-    <div class="l">คนดูเฉลี่ย/คลิป</div></div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">774,727</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">82</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +1,556</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#0000fe">907</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row us"><span class="rk">1</span><span class="nm">THE STANDARD POP<span class="star">★</span></span><div class="bar"><i style="width:100%"></i></div><span class="vl">907</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Vogue Thailand</span><div class="bar"><i style="width:47%"></i></div><span class="vl">422</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Harper&#x27;s BAZAAR Thailand</span><div class="bar"><i style="width:35%"></i></div><span class="vl">313</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">Mint Magazine Thailand</span><div class="bar"><i style="width:17%"></i></div><span class="vl">158</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">ELLE Thailand</span><div class="bar"><i style="width:8%"></i></div><span class="vl">75</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">WWD Thailand</span><div class="bar"><i style="width:3%"></i></div><span class="vl">23</span></div></div>
+    
   </div>
-  <div class="scroll"><table>
-    <tr><th>#</th><th>เพจ</th><th class="r">คนดูเฉลี่ยต่อคลิป</th></tr>
-    <tr class="us"><td class="n">1</td><td class="pname">THE STANDARD POP<span class="rankb">★</span><div class="bar"><i style="width:100%"></i></div></td><td class="n">7,804</td></tr><tr><td class="n">2</td><td class="pname">Mint Magazine Thailand<div class="bar"><i style="width:84%"></i></div></td><td class="n">6,575</td></tr><tr><td class="n">3</td><td class="pname">Vogue Thailand<div class="bar"><i style="width:17%"></i></div></td><td class="n">1,310</td></tr><tr><td class="n">4</td><td class="pname">ELLE Thailand<div class="bar"><i style="width:0%"></i></div></td><td class="n">15</td></tr>
-  </table></div><div class="note">⏭️ ข้าม 2 เพจที่ไม่ได้โพสต์: Harper&#x27;s BAZAAR Thailand (ไม่ได้โพสต์ในช่วงนี้), WWD Thailand (ไม่ได้โพสต์ในช่วงนี้)</div>
 </div>
-<div class="card">
-  <div class="card-hd" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""><span>TikTok</span>
-    <span class="card-rank"><b>4</b>/6 ในลีก</span>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#c4302b 0%,#d36460 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/youtube_white.png" alt=""></span>
+    <span class="t">YouTube</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">1/4 ในลีก</span>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="v">302,121</div><div class="l">ผู้ติดตาม</div></div>
-    <div class="stat"><div class="v">7</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>~+352</div><div class="l">ติดตามสัปดาห์นี้</div></div>
-    <div class="stat accent"><div class="v" style="color:#0000fe">957</div>
-    <div class="l">RCS/โพสต์</div></div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">341,000</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">1</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-down">▼ -1,129</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#0000fe">7.8K</div><div class="l">คนดูเฉลี่ย/คลิป</div></div>
+    </div>
+    <div class="mlabel">คนดูเฉลี่ยต่อคลิป</div>
+    <div class="lb"><div class="lb-row us"><span class="rk">1</span><span class="nm">THE STANDARD POP<span class="star">★</span></span><div class="bar"><i style="width:100%"></i></div><span class="vl">7,804</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Mint Magazine Thailand</span><div class="bar"><i style="width:84%"></i></div><span class="vl">6,575</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Vogue Thailand</span><div class="bar"><i style="width:17%"></i></div><span class="vl">1,310</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">ELLE Thailand</span><div class="bar"><i style="width:0%"></i></div><span class="vl">15</span></div></div>
+    <div class="warn">⏭️ ข้าม 2 เพจที่ไม่ได้โพสต์</div>
   </div>
-  <div class="scroll"><table>
-    <tr><th>#</th><th>เพจ</th><th class="r">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
-    <tr><td class="n">1</td><td class="pname">Mint Magazine Thailand<div class="bar"><i style="width:100%"></i></div></td><td class="n">62,491</td></tr><tr><td class="n">2</td><td class="pname">Vogue Thailand<div class="bar"><i style="width:3%"></i></div></td><td class="n">2,071</td></tr><tr><td class="n">3</td><td class="pname">ELLE Thailand<div class="bar"><i style="width:2%"></i></div></td><td class="n">1,497</td></tr><tr class="us"><td class="n">4</td><td class="pname">THE STANDARD POP<span class="rankb">★</span><div class="bar"><i style="width:2%"></i></div></td><td class="n">957</td></tr><tr><td class="n">5</td><td class="pname">wwdthailand<div class="bar"><i style="width:1%"></i></div></td><td class="n">731</td></tr><tr><td class="n">6</td><td class="pname">Harper&#x27;s Bazaar Thailand<div class="bar"><i style="width:1%"></i></div></td><td class="n">434</td></tr>
-  </table></div>
 </div>
-<div class="card">
-  <div class="card-hd" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""><span>Instagram</span>
-    <span class="card-rank"><b>5</b>/6 ในลีก</span>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""></span>
+    <span class="t">TikTok</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">4/6 ในลีก</span>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="v">221,656</div><div class="l">ผู้ติดตาม</div></div>
-    <div class="stat"><div class="v">83</div><div class="l">โพสต์สัปดาห์นี้</div></div>
-    <div class="stat"><div class="v up"><i class="ic-arrow">▲</i>+919</div><div class="l">ติดตามสัปดาห์นี้</div></div><div class="stat"><div class="v">151,815</div><div class="l">คนเห็น/วัน</div></div>
-    <div class="stat accent"><div class="v" style="color:#0000fe">1.4K</div>
-    <div class="l">RCS/โพสต์</div></div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">302,121</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">7</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ ~+352</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#0000fe">957</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">Mint Magazine Thailand</span><div class="bar"><i style="width:100%"></i></div><span class="vl">62,491</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Vogue Thailand</span><div class="bar"><i style="width:3%"></i></div><span class="vl">2,071</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">ELLE Thailand</span><div class="bar"><i style="width:2%"></i></div><span class="vl">1,497</span></div><div class="lb-row us"><span class="rk">4</span><span class="nm">THE STANDARD POP<span class="star">★</span></span><div class="bar"><i style="width:2%"></i></div><span class="vl">957</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">wwdthailand</span><div class="bar"><i style="width:1%"></i></div><span class="vl">731</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">Harper&#x27;s Bazaar Thailand</span><div class="bar"><i style="width:1%"></i></div><span class="vl">434</span></div></div>
+    
   </div>
-  <div class="scroll"><table>
-    <tr><th>#</th><th>เพจ</th><th class="r">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</th></tr>
-    <tr><td class="n">1</td><td class="pname">Mint Magazine Thailand<div class="bar"><i style="width:100%"></i></div></td><td class="n">6,330</td></tr><tr><td class="n">2</td><td class="pname">Harper&#x27;s BAZAAR Thailand<div class="bar"><i style="width:66%"></i></div></td><td class="n">4,182</td></tr><tr><td class="n">3</td><td class="pname">Vogue Thailand<div class="bar"><i style="width:56%"></i></div></td><td class="n">3,541</td></tr><tr><td class="n">4</td><td class="pname">ELLE Thailand<div class="bar"><i style="width:29%"></i></div></td><td class="n">1,832</td></tr><tr class="us"><td class="n">5</td><td class="pname">THE STANDARD POP<span class="rankb">★</span><div class="bar"><i style="width:22%"></i></div></td><td class="n">1,383</td></tr><tr><td class="n">6</td><td class="pname">WWD Thailand<div class="bar"><i style="width:12%"></i></div></td><td class="n">770</td></tr>
-  </table></div>
 </div>
-<div class="card"><div class="card-hd" style="background:linear-gradient(135deg,#0000fe 0%,#3333fe 100%)">
-  <span>คอนเทนต์เด่นของ POP สัปดาห์นี้</span>
-  <span class="card-rank">Top 6</span></div>
-<div class="postlist">
-
-<div class="post">
-  <div class="pnum"><b>2</b></div>
-  <div class="picon" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></div>
-  <div class="pbody">
-    <div class="ptitle">ซี ทวินันท์ ขึ้นแคมเปญ Calvin Klein ระดับเอเชียครั้งแรก Calvin Klein เปิดตัวแคมเปญประจำฤดู…</div>
-    <div class="pmeta">Instagram · 8/11/26, 9:27 AM</div>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+    <span class="t">Instagram</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">5/6 ในลีก</span>
   </div>
-  <div class="peng" style="color:#0000fe"><b>8,729</b><a class="pm-open" href="https://www.instagram.com/p/Db4g2_FjuyV/" target="_blank">เปิด →</a></div>
-</div>
-<div class="post">
-  <div class="pnum"><b>3</b></div>
-  <div class="picon" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></div>
-  <div class="pbody">
-    <div class="ptitle">🔵 7 THINGS WE LOVE ABOUT V OF BTS STYLE MOMENTS จากไอดอลสู่ไอคอนวงการแฟชั่นและบิวตี้ หากพู…</div>
-    <div class="pmeta">Instagram · 8/16/26, 8:01 PM</div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">221,656</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">83</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +919</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#0000fe">1.4K</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">ไลค์+คอมเมนต์+แชร์ เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">Mint Magazine Thailand</span><div class="bar"><i style="width:100%"></i></div><span class="vl">6,330</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Harper&#x27;s BAZAAR Thailand</span><div class="bar"><i style="width:66%"></i></div><span class="vl">4,182</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Vogue Thailand</span><div class="bar"><i style="width:56%"></i></div><span class="vl">3,541</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">ELLE Thailand</span><div class="bar"><i style="width:29%"></i></div><span class="vl">1,832</span></div><div class="lb-row us"><span class="rk">5</span><span class="nm">THE STANDARD POP<span class="star">★</span></span><div class="bar"><i style="width:22%"></i></div><span class="vl">1,383</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">WWD Thailand</span><div class="bar"><i style="width:12%"></i></div><span class="vl">770</span></div></div>
+    
   </div>
-  <div class="peng" style="color:#0000fe"><b>5,861</b><a class="pm-open" href="https://www.instagram.com/p/DcGhZK1Dh9c/" target="_blank">เปิด →</a></div>
 </div>
-<div class="post">
-  <div class="pnum"><b>4</b></div>
-  <div class="picon" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></div>
-  <div class="pbody">
-    <div class="ptitle">ALIE BLACKCOBRA ปล่อยซิงเกิลใหม่สุดอาร์ตกับเพลง ‘MANIFEST (ภาวนา)’ ALIE BLACKCOBRA คัมแบ็ก…</div>
-    <div class="pmeta">Instagram · 8/13/26, 5:13 PM</div>
+    
+<div class="bubble posts-bubble">
+  <div class="hd" style="background:linear-gradient(135deg,#0000fe 0%,#3333fe 100%)">
+    <span class="t">คอนเทนต์เด่น POP สัปดาห์นี้</span>
+    <span class="badge" style="background:rgba(255,255,255,.2)">Top 5</span>
   </div>
-  <div class="peng" style="color:#0000fe"><b>5,222</b><a class="pm-open" href="https://www.instagram.com/p/Db-f15CDkOS/" target="_blank">เปิด →</a></div>
+  <div class="bd">
+<a class="pc" href="https://www.facebook.com/621730003317922/posts/1516538583837055" target="_blank"><span class="rk">1</span><span class="plat-mini" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+  <span class="body"><span class="cap">UPDATE: ซี ทวินันท์ ขึ้นแคมเปญ Calvin Klein ระดับเอเชียครั้งแรก Calvin Klein เปิดตัวแคมเปญประจำฤดูกา…</span>
+    <span class="mt">Facebook · 8/11/26, 9:27 AM</span></span>
+  <span class="eng">22,803</span></a>
+<a class="pc" href="https://www.instagram.com/p/Db4g2_FjuyV/" target="_blank"><span class="rk">2</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">ซี ทวินันท์ ขึ้นแคมเปญ Calvin Klein ระดับเอเชียครั้งแรก Calvin Klein เปิดตัวแคมเปญประจำฤดูกาล Fall 2…</span>
+    <span class="mt">Instagram · 8/11/26, 9:27 AM</span></span>
+  <span class="eng">8,729</span></a>
+<a class="pc" href="https://www.instagram.com/p/DcGhZK1Dh9c/" target="_blank"><span class="rk">3</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">🔵 7 THINGS WE LOVE ABOUT V OF BTS STYLE MOMENTS จากไอดอลสู่ไอคอนวงการแฟชั่นและบิวตี้ หากพูดถึงสมาชิก…</span>
+    <span class="mt">Instagram · 8/16/26, 8:01 PM</span></span>
+  <span class="eng">5,861</span></a>
+<a class="pc" href="https://www.instagram.com/p/Db-f15CDkOS/" target="_blank"><span class="rk">4</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">ALIE BLACKCOBRA ปล่อยซิงเกิลใหม่สุดอาร์ตกับเพลง ‘MANIFEST (ภาวนา)’ ALIE BLACKCOBRA คัมแบ็กกับซิงเกิล…</span>
+    <span class="mt">Instagram · 8/13/26, 5:13 PM</span></span>
+  <span class="eng">5,222</span></a>
+<a class="pc" href="https://www.instagram.com/p/Db7T0qCH13B/" target="_blank"><span class="rk">5</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">ปิดฉากลงไปอย่างสวยงามสำหรับงานกาล่าสุดยิ่งใหญ่ WEIBO GALA 2026 ที่จัดขึ้นเมื่อวันที่ 8 สิงหาคมที่ผ่า…</span>
+    <span class="mt">Instagram · 8/12/26, 11:30 AM</span></span>
+  <span class="eng">5,185</span></a></div>
 </div>
-<div class="post">
-  <div class="pnum"><b>5</b></div>
-  <div class="picon" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
-    <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></div>
-  <div class="pbody">
-    <div class="ptitle">ปิดฉากลงไปอย่างสวยงามสำหรับงานกาล่าสุดยิ่งใหญ่ WEIBO GALA 2026 ที่จัดขึ้นเมื่อวันที่ 8 สิง…</div>
-    <div class="pmeta">Instagram · 8/12/26, 11:30 AM</div>
-  </div>
-  <div class="peng" style="color:#0000fe"><b>5,185</b><a class="pm-open" href="https://www.instagram.com/p/Db7T0qCH13B/" target="_blank">เปิด →</a></div>
-</div>
-</div></div>
-<footer>ข้อมูล: <b>Fanpage Karma</b> · สร้างอัตโนมัติทุกสัปดาห์ ·
-<a href="https://tsd-pengpis.github.io/digital-report/">TSD Digital Report ทุกบ้าน</a></footer>
+  </main>
+  <footer>ข้อมูล: <b style="color:#0000fe">Fanpage Karma</b> · สร้างอัตโนมัติ ·
+  <a href="https://tsd-pengpis.github.io/digital-report/">TSD Digital Report ทุกบ้าน</a></footer>
 </div></body></html>
