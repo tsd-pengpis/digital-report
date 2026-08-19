@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e92226">
+<title>THE STANDARD NEWS · รายงานประจำสัปดาห์ 2026-W35</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans Thai',sans-serif;
+  color:#1f2328;line-height:1.5;min-height:100vh;background:radial-gradient(560px 340px at 8% 0%,#f06467 0%,transparent 70%),radial-gradient(640px 420px at 96% 6%,#f06467 0%,transparent 70%),linear-gradient(180deg,#f06467 0%,#facecf 300px,#fef2f2 460px,#eceff3 720px);background-attachment:fixed}
+.page{max-width:1000px;margin:0 auto;padding:0 12px 40px}
+h1{font-size:1.3em;margin-bottom:6px}
+/* ---------- masthead บ้าน (gradient + จุด + วอเตอร์มาร์ก) ---------- */
+.masthead{position:relative;overflow:hidden;border-radius:0 0 26px 26px;margin:0 -12px;
+  padding:34px 20px 26px;color:#ffffff;
+  background:linear-gradient(130deg,#e92226 0%,#ee595c 62%,#f59c9d 100%);
+  box-shadow:0 8px 26px #f49092}
+.masthead::before,.masthead::after{content:'';position:absolute;border-radius:50%;
+  pointer-events:none}
+.masthead::before{width:200px;height:200px;top:-84px;right:-60px;
+  background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.16),transparent 68%)}
+.masthead::after{width:150px;height:150px;bottom:-66px;left:-42px;
+  background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.10),transparent 68%)}
+.wm{position:absolute;right:14px;bottom:-14px;font-weight:900;font-size:3.1em;
+  line-height:1;letter-spacing:.01em;color:#ffffff;opacity:.07;
+  white-space:nowrap;pointer-events:none;font-family:inherit}
+.mh-row{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
+.mh-row img.logo{width:64px;height:64px;border-radius:16px;background:#fff;
+  padding:7px;box-shadow:0 4px 14px rgba(0,0,0,.20);flex-shrink:0}
+.mh-row .tick{flex:1;min-width:0}
+.mh-row .ttl{font-weight:800;font-size:1.35em;line-height:1.15;display:flex;
+  align-items:center;gap:8px;flex-wrap:wrap}
+.mh-row .sub{opacity:.9;font-size:.82em;margin-top:4px}
+.week-pill{margin-left:auto;flex-shrink:0;text-align:center;background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.30);border-radius:14px;padding:7px 11px;font-size:.72em;
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.week-pill b{display:block;font-size:1.55em;line-height:1}
+.mh-dots{display:flex;gap:7px;margin-top:16px;position:relative;z-index:1}
+.mh-dots i{width:10px;height:10px;border-radius:50%;background:#f38588;
+  opacity:.5}
+.mh-dots i:first-child{background:#fff;opacity:.95;width:22px;border-radius:99px}
+/* ---------- masthead (การ์ดหัวบ้าน) ---------- */
+.bubble{background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 3px 14px rgba(16,24,40,.10)}
+.hd{display:flex;align-items:center;gap:10px;padding:13px 16px;color:#fff}
+.hd .plat{width:28px;height:28px;border-radius:8px;display:flex;flex-shrink:0;
+  align-items:center;justify-content:center}
+.hd .plat img{width:16px;height:16px;display:block}
+.hd .t{font-weight:800;flex:1;min-width:0;font-size:.98em}
+.hd .badge{font-size:.72em;font-weight:800;padding:4px 9px;border-radius:11px;
+  flex-shrink:0;white-space:nowrap}
+main{display:grid;gap:14px;margin-top:14px}
+.hero-bubble .hero-img{width:100%;aspect-ratio:20/13;object-fit:cover;display:block}
+.hero-bubble.no-pic .bd{padding-top:14px}
+.bd{padding:12px 16px 14px}
+.feat .fcap{font-size:.95em;font-weight:700;line-height:1.45}
+.feat .fmeta{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:8px;
+  font-size:.76em;color:#5c666f}
+.fban{font-size:.78em;font-weight:800;padding:3px 10px;border-radius:11px;margin-left:auto}
+.pc-open{color:#e92226;font-weight:700;text-decoration:none}
+/* ---------- cards grid: desktop 2 คอล ---------- */
+@media (min-width:640px){
+  main{grid-template-columns:repeat(2,1fr)}
+  .hero-bubble,.take-bubble,.posts-bubble{grid-column:1/-1}
+}
+/* ---------- stats แถว ---------- */
+.st{display:flex;gap:8px}
+.st .c{flex:1;min-width:0;text-align:left;background:#f7f9fb;border-radius:10px;
+  padding:9px 10px}
+.st .c .n{font-size:1.02em;font-weight:800;font-variant-numeric:tabular-nums}
+.st .c .n.v-up{color:#146c2e} .st .c .n.v-down{color:#b3261e}
+.st .c .l{font-size:.63em;color:#7b858f;margin-top:2px;white-space:nowrap}
+.mlabel{font-size:.7em;color:#7b858f;margin:8px 2px 0;font-weight:600}
+/* ---------- leaderboard ---------- */
+.lb{margin-top:8px}
+.lb-row{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:8px}
+.lb-row .rk{width:18px;font-size:.76em;color:#9aa3ab;font-weight:800;flex-shrink:0}
+.lb-row .nm{flex:1;min-width:0;font-size:.8em;color:#46505a;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.lb-row .star{color:#e92226;margin-left:4px}
+.lb-row .bar{flex:1;max-width:90px;height:5px;background:#eef1f5;border-radius:99px;
+  overflow:hidden}
+.lb-row .bar i{display:block;height:100%;border-radius:99px;
+  background:linear-gradient(90deg,#e92226,#f38588)}
+.lb-row .vl{font-size:.78em;font-weight:700;color:#46505a;flex-shrink:0;
+  font-variant-numeric:tabular-nums}
+.lb-row.us{background:#fde9e9;font-weight:800}
+.lb-row.us .nm{color:#1f2328}
+.warn{background:#fdf3d7;border:1px solid #e8d089;color:#6b4e00;border-radius:8px;
+  padding:8px 10px;font-size:.74em;margin-top:10px}
+/* ---------- takeaway ---------- */
+.take{background:#f5f7f9;border-radius:10px;padding:12px 14px}
+.take-l{font-size:.82em;color:#3d4750;line-height:1.6;margin-top:6px}
+.take-l:first-child{font-weight:800;color:#e92226;margin-top:0}
+/* ---------- โพสต์ ---------- */
+.pc{display:flex;align-items:center;gap:10px;padding:10px 0;text-decoration:none;
+  color:inherit;border-bottom:1px solid #eef1f5}
+.pc:last-child{border-bottom:none}
+.pc .rk{width:16px;font-size:.8em;font-weight:800;color:#c8ced5;flex-shrink:0}
+.pc .plat-mini{width:30px;height:30px;border-radius:9px;display:flex;flex-shrink:0;
+  align-items:center;justify-content:center}
+.pc .plat-mini img{width:16px;height:16px}
+.pc .body{flex:1;min-width:0}
+.pc .cap{font-size:.86em;font-weight:600;color:#262b31;display:-webkit-box;
+  -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
+.pc .mt{font-size:.7em;color:#7b858f;margin-top:3px;display:block}
+.pc .eng{font-size:.86em;font-weight:800;color:#e92226;flex-shrink:0}
+.pc:hover .cap{text-decoration:underline}
+/* ---------- nav ---------- */
+nav{display:flex;gap:8px;margin:16px 0 2px;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;padding:2px}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;text-decoration:none;font-size:.78em;font-weight:700;padding:8px 14px;
+  border-radius:999px;background:#fff;color:#46505a;border:1px solid #d6dbe1;
+  box-shadow:0 2px 6px rgba(16,24,40,.06)}
+nav a.cur{background:#e92226;color:#ffffff;border-color:transparent;
+  box-shadow:0 3px 10px #f59c9d}
+footer{text-align:center;color:#8a939d;font-size:.75em;margin-top:26px}
+footer a{color:#46505a}
+</style></head><body>
+<div class="page">
+  <div class="masthead">
+    <span class="wm">NEWS</span>
+    <div class="mh-row">
+      <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/news.png" alt="">
+      <div class="tick">
+        <div class="ttl">THE STANDARD NEWS</div>
+        <div class="sub">รายงานดิจิทัลประจำสัปดาห์ · 12-18 ส.ค. 2026</div>
+      </div>
+      <div class="week-pill"><b>2026-W35</b>อัปเดต<br>ทุกสัปดาห์</div>
+    </div>
+    <div class="mh-dots">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+  <nav><a class="cur" href="https://tsd-pengpis.github.io/digital-report/2026-W35/news.html">NEWS</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/wealth.html">WEALTH</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/pop.html">POP</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/life.html">LIFE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/sport.html">SPORT</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/knd.html">KND</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/tss.html">SECRET SAUCE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/podcast.html">PODCAST</a></nav>
+  <main>
+    
+<div class="bubble hero-bubble">
+  <div class="hd" style="background:linear-gradient(135deg,#e92226 0%,#ee595c 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+    <span class="t">คอนเทนต์เด่นประจำสัปดาห์</span>
+    <span class="badge" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">#1 ของบ้าน</span>
+  </div>
+  <img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W35/img/news.jpg" alt="">
+  <div class="bd">
+    <div class="feat">
+      <div class="fcap">เผยความงาม ‘ดวงตาพญานาคา’ แห่งภูลังกา มหัศจรรย์ทางธรณีวิทยาที่รอให้พิสูจน์ช่วงฤดูฝน วันนี้ (17 สิงหาคม ) กรมอุ…</div>
+      <div class="fmeta">Facebook · 8/17/26, 4:12 PM · <a class="pc-open" href="https://www.facebook.com/586530866939594/posts/1422627369996602" target="_blank">เปิด →</a>
+        <span class="fban" style="background:#fce2e3;color:#e92226">
+          33,797 engagement</span></div>
+    </div>
+  </div>
+</div>
+    
+<div class="bubble take-bubble">
+  <div class="bd">
+    <div class="take">
+      <div class="take-l">อ่านเร็วสำหรับทีม · สัปดาห์ 2026-W35</div>
+      <div class="take-l">• แพลตฟอร์มที่แรงที่สุด: Facebook อันดับ 7/18 ของลีก</div><div class="take-l">• ผู้ติดตามโตสุด: Facebook +7,950 สัปดาห์นี้</div>
+    </div>
+  </div>
+</div>
+    
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#c4302b 0%,#d36460 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/youtube_white.png" alt=""></span>
+    <span class="t">YouTube</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">8/19 ในลีก</span>
+  </div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">4,530,000</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">56</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +5,877</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#e92226">417</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">Engagement เฉลี่ยต่อคลิป</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">สรยุทธ สุทัศนะจินดา กรรมกรข่าว</span><div class="bar"><i style="width:100%"></i></div><span class="vl">983</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">ข่าวช่อง8</span><div class="bar"><i style="width:87%"></i></div><span class="vl">857</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Thairath News - ข่าวไทยรัฐ</span><div class="bar"><i style="width:65%"></i></div><span class="vl">638</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">ครอบครัวข่าว3</span><div class="bar"><i style="width:57%"></i></div><span class="vl">562</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">เรื่องเล่าเช้านี้</span><div class="bar"><i style="width:49%"></i></div><span class="vl">478</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">terodigital</span><div class="bar"><i style="width:48%"></i></div><span class="vl">473</span></div><div class="lb-row"><span class="rk">7</span><span class="nm">Dailynews Online</span><div class="bar"><i style="width:45%"></i></div><span class="vl">441</span></div><div class="lb-row us"><span class="rk">8</span><span class="nm">THE STANDARD<span class="star">★</span></span><div class="bar"><i style="width:42%"></i></div><span class="vl">417</span></div><div class="lb-row"><span class="rk">9</span><span class="nm">matichon tv</span><div class="bar"><i style="width:40%"></i></div><span class="vl">389</span></div><div class="lb-row"><span class="rk">10</span><span class="nm">BBC News ไทย</span><div class="bar"><i style="width:31%"></i></div><span class="vl">304</span></div><div class="lb-row"><span class="rk">11</span><span class="nm">Thai PBS</span><div class="bar"><i style="width:31%"></i></div><span class="vl">303</span></div><div class="lb-row"><span class="rk">12</span><span class="nm">TODAY - สำนักข่าวทูเดย์</span><div class="bar"><i style="width:24%"></i></div><span class="vl">239</span></div><div class="lb-row"><span class="rk">13</span><span class="nm">Nation Online</span><div class="bar"><i style="width:24%"></i></div><span class="vl">235</span></div><div class="lb-row"><span class="rk">14</span><span class="nm">PPTV HD 36</span><div class="bar"><i style="width:23%"></i></div><span class="vl">228</span></div><div class="lb-row"><span class="rk">15</span><span class="nm">The Cloud</span><div class="bar"><i style="width:19%"></i></div><span class="vl">190</span></div><div class="lb-row"><span class="rk">16</span><span class="nm">TNN</span><div class="bar"><i style="width:15%"></i></div><span class="vl">145</span></div><div class="lb-row"><span class="rk">17</span><span class="nm">ThaiPBSNews</span><div class="bar"><i style="width:11%"></i></div><span class="vl">109</span></div><div class="lb-row"><span class="rk">18</span><span class="nm">The MATTER</span><div class="bar"><i style="width:5%"></i></div><span class="vl">48</span></div><div class="lb-row"><span class="rk">19</span><span class="nm">The Momentum</span><div class="bar"><i style="width:2%"></i></div><span class="vl">20</span></div></div>
+    
+  </div>
+</div>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+    <span class="t">Facebook</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">7/18 ในลีก</span>
+  </div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">4,138,334</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">272</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +7,950</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#e92226">65</div><div class="l">แชร์/โพสต์</div></div>
+    </div>
+    <div class="mlabel">แชร์เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">สรยุทธ สุทัศนะจินดา กรรมกรข่าว</span><div class="bar"><i style="width:100%"></i></div><span class="vl">448</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Thairath Plus - ไทยรัฐพลัส</span><div class="bar"><i style="width:47%"></i></div><span class="vl">210</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Poetry of Bitch</span><div class="bar"><i style="width:21%"></i></div><span class="vl">95</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">Thairath - ไทยรัฐออนไลน์</span><div class="bar"><i style="width:19%"></i></div><span class="vl">83</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">บีบีซีไทย - BBC Thai</span><div class="bar"><i style="width:16%"></i></div><span class="vl">70</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">Nation Online</span><div class="bar"><i style="width:15%"></i></div><span class="vl">68</span></div><div class="lb-row us"><span class="rk">7</span><span class="nm">THE STANDARD<span class="star">★</span></span><div class="bar"><i style="width:15%"></i></div><span class="vl">65</span></div><div class="lb-row"><span class="rk">8</span><span class="nm">Thai PBS</span><div class="bar"><i style="width:14%"></i></div><span class="vl">64</span></div><div class="lb-row"><span class="rk">9</span><span class="nm">TNN World</span><div class="bar"><i style="width:13%"></i></div><span class="vl">57</span></div><div class="lb-row"><span class="rk">10</span><span class="nm">The MATTER</span><div class="bar"><i style="width:12%"></i></div><span class="vl">56</span></div><div class="lb-row"><span class="rk">11</span><span class="nm">รอบโลก by กรุณา บัวคำศรี</span><div class="bar"><i style="width:9%"></i></div><span class="vl">40</span></div><div class="lb-row"><span class="rk">12</span><span class="nm">TNN</span><div class="bar"><i style="width:9%"></i></div><span class="vl">40</span></div><div class="lb-row"><span class="rk">13</span><span class="nm">ทันโลก กับ Thai PBS</span><div class="bar"><i style="width:9%"></i></div><span class="vl">39</span></div><div class="lb-row"><span class="rk">14</span><span class="nm">The Reporters</span><div class="bar"><i style="width:7%"></i></div><span class="vl">30</span></div><div class="lb-row"><span class="rk">15</span><span class="nm">Matichon Online - มติชนออนไลน์</span><div class="bar"><i style="width:6%"></i></div><span class="vl">27</span></div><div class="lb-row"><span class="rk">16</span><span class="nm">Thai PBS News</span><div class="bar"><i style="width:5%"></i></div><span class="vl">24</span></div><div class="lb-row"><span class="rk">17</span><span class="nm">TODAY</span><div class="bar"><i style="width:5%"></i></div><span class="vl">24</span></div><div class="lb-row"><span class="rk">18</span><span class="nm">PPTV HD 36</span><div class="bar"><i style="width:4%"></i></div><span class="vl">18</span></div></div>
+    
+  </div>
+</div>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""></span>
+    <span class="t">TikTok</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">10/12 ในลีก</span>
+  </div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">2,455,852</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">37</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ ~+2,970</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#e92226">46</div><div class="l">แชร์/โพสต์</div></div>
+    </div>
+    <div class="mlabel">แชร์เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">Thairath</span><div class="bar"><i style="width:100%"></i></div><span class="vl">3,243</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">ข่าวช่อง8</span><div class="bar"><i style="width:53%"></i></div><span class="vl">1,721</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">MGR Online</span><div class="bar"><i style="width:20%"></i></div><span class="vl">647</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">Amarin TV HD 34</span><div class="bar"><i style="width:19%"></i></div><span class="vl">614</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">Spark Update</span><div class="bar"><i style="width:13%"></i></div><span class="vl">428</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">Thai PBS</span><div class="bar"><i style="width:13%"></i></div><span class="vl">412</span></div><div class="lb-row"><span class="rk">7</span><span class="nm">Ch7HD News</span><div class="bar"><i style="width:12%"></i></div><span class="vl">375</span></div><div class="lb-row"><span class="rk">8</span><span class="nm">Thai PBS news</span><div class="bar"><i style="width:5%"></i></div><span class="vl">177</span></div><div class="lb-row"><span class="rk">9</span><span class="nm">TNN Online</span><div class="bar"><i style="width:4%"></i></div><span class="vl">132</span></div><div class="lb-row us"><span class="rk">10</span><span class="nm">THE STANDARD TH<span class="star">★</span></span><div class="bar"><i style="width:1%"></i></div><span class="vl">46</span></div><div class="lb-row"><span class="rk">11</span><span class="nm">BBC News ไทย</span><div class="bar"><i style="width:1%"></i></div><span class="vl">42</span></div><div class="lb-row"><span class="rk">12</span><span class="nm">TODAY</span><div class="bar"><i style="width:1%"></i></div><span class="vl">29</span></div></div>
+    
+  </div>
+</div>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+    <span class="t">Instagram</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">7/13 ในลีก</span>
+  </div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">732,166</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">128</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +433</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#e92226">1.1K</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">Engagement เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">Thairath Plus - ไทยรัฐพลัส</span><div class="bar"><i style="width:100%"></i></div><span class="vl">3,471</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Thairath</span><div class="bar"><i style="width:99%"></i></div><span class="vl">3,445</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">BBC News ไทย</span><div class="bar"><i style="width:72%"></i></div><span class="vl">2,495</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">MatichonOnline_Official</span><div class="bar"><i style="width:61%"></i></div><span class="vl">2,134</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">TNN_World</span><div class="bar"><i style="width:36%"></i></div><span class="vl">1,247</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">NATION ONLINE</span><div class="bar"><i style="width:33%"></i></div><span class="vl">1,131</span></div><div class="lb-row us"><span class="rk">7</span><span class="nm">THE STANDARD<span class="star">★</span></span><div class="bar"><i style="width:32%"></i></div><span class="vl">1,121</span></div><div class="lb-row"><span class="rk">8</span><span class="nm">The Momentum</span><div class="bar"><i style="width:23%"></i></div><span class="vl">781</span></div><div class="lb-row"><span class="rk">9</span><span class="nm">The MATTER</span><div class="bar"><i style="width:17%"></i></div><span class="vl">599</span></div><div class="lb-row"><span class="rk">10</span><span class="nm">PPTVHD36</span><div class="bar"><i style="width:16%"></i></div><span class="vl">570</span></div><div class="lb-row"><span class="rk">11</span><span class="nm">TODAY</span><div class="bar"><i style="width:14%"></i></div><span class="vl">484</span></div><div class="lb-row"><span class="rk">12</span><span class="nm">TNN Online</span><div class="bar"><i style="width:10%"></i></div><span class="vl">363</span></div><div class="lb-row"><span class="rk">13</span><span class="nm">Thai PBS ไทยพีบีเอส</span><div class="bar"><i style="width:9%"></i></div><span class="vl">300</span></div></div>
+    <div class="warn">⏭️ ข้าม 1 เพจที่ไม่ได้โพสต์</div>
+  </div>
+</div>
+    
+<div class="bubble posts-bubble">
+  <div class="hd" style="background:linear-gradient(135deg,#e92226 0%,#ed4e51 100%)">
+    <span class="t">คอนเทนต์เด่น NEWS สัปดาห์นี้</span>
+    <span class="badge" style="background:rgba(255,255,255,.2)">Top 5</span>
+  </div>
+  <div class="bd">
+<a class="pc" href="https://www.facebook.com/586530866939594/posts/1422627369996602" target="_blank"><span class="rk">1</span><span class="plat-mini" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+  <span class="body"><span class="cap">เผยความงาม ‘ดวงตาพญานาคา’ แห่งภูลังกา มหัศจรรย์ทางธรณีวิทยาที่รอให้พิสูจน์ช่วงฤดูฝน วันนี้ (17 สิงหา…</span>
+    <span class="mt">Facebook · 8/17/26, 4:12 PM</span></span>
+  <span class="eng">33,797</span></a>
+<a class="pc" href="https://www.facebook.com/586530866939594/posts/1423338879925451" target="_blank"><span class="rk">2</span><span class="plat-mini" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+  <span class="body"><span class="cap">ภราดร ปริศนานันทกุล รัฐมนตรีประจำสำนักนายกรัฐมนตรี กล่าวถึงกรณีพรรคร่วมฝ่ายค้านเตรียมยื่นญัตติขอเปิด…</span>
+    <span class="mt">Facebook · 8/18/26, 11:25 AM</span></span>
+  <span class="eng">17,467</span></a>
+<a class="pc" href="https://www.facebook.com/586530866939594/posts/1423537496572256" target="_blank"><span class="rk">3</span><span class="plat-mini" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+  <span class="body"><span class="cap">UPDATE: กกต. ชวนคนรุ่นใหม่ประกวดคลิปสั้น ‘ประชาธิปไตยสีขาว’ สร้างค่านิยมเลือกตั้งสุจริต ลุ้นเงินรางว…</span>
+    <span class="mt">Facebook · 8/18/26, 4:28 PM</span></span>
+  <span class="eng">12,278</span></a>
+<a class="pc" href="https://www.instagram.com/p/DcIXg2tmmrJ/" target="_blank"><span class="rk">4</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">เปิดตัวผู้สมัคร นายก อบจ. นนทบุรี พรรคประชาชน . พรรคประชาชนเปิดตัว เดชรัต สุขกำเนิด ผู้ออกแบบและนักพ…</span>
+    <span class="mt">Instagram · 8/17/26, 1:13 PM</span></span>
+  <span class="eng">11,761</span></a>
+<a class="pc" href="https://www.facebook.com/586530866939594/posts/1419713420287997" target="_blank"><span class="rk">5</span><span class="plat-mini" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+  <span class="body"><span class="cap">UPDATE: นายกฯ ปฏิเสธสหรัฐฯ ตั้งฐานผลิตโดรนในไทย ยันแยกความมั่นคง-การค้า ไม่ใช้เรื่องทหารเจรจาภาษี ย้…</span>
+    <span class="mt">Facebook · 8/14/26, 10:18 AM</span></span>
+  <span class="eng">11,016</span></a></div>
+</div>
+  </main>
+  <footer>ข้อมูล: <b style="color:#e92226">Fanpage Karma</b> · สร้างอัตโนมัติ ·
+  <a href="https://tsd-pengpis.github.io/digital-report/">TSD Digital Report ทุกบ้าน</a></footer>
+</div></body></html>

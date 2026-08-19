@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fea5f7">
+<title>THE STANDARD SPORT · รายงานประจำสัปดาห์ 2026-W35</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans Thai',sans-serif;
+  color:#1f2328;line-height:1.5;min-height:100vh;background:radial-gradient(560px 340px at 8% 0%,#fec0f9 0%,transparent 70%),radial-gradient(640px 420px at 96% 6%,#fec0f9 0%,transparent 70%),linear-gradient(180deg,#fec0f9 0%,#ffebfd 300px,#fffaff 460px,#eceff3 720px);background-attachment:fixed}
+.page{max-width:1000px;margin:0 auto;padding:0 12px 40px}
+h1{font-size:1.3em;margin-bottom:6px}
+/* ---------- masthead บ้าน (gradient + จุด + วอเตอร์มาร์ก) ---------- */
+.masthead{position:relative;overflow:hidden;border-radius:0 0 26px 26px;margin:0 -12px;
+  padding:34px 20px 26px;color:#3d1f3a;
+  background:linear-gradient(130deg,#fea5f7 0%,#febcf9 62%,#ffd6fb 100%);
+  box-shadow:0 8px 26px #fed2fb}
+.masthead::before,.masthead::after{content:'';position:absolute;border-radius:50%;
+  pointer-events:none}
+.masthead::before{width:200px;height:200px;top:-84px;right:-60px;
+  background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.16),transparent 68%)}
+.masthead::after{width:150px;height:150px;bottom:-66px;left:-42px;
+  background:radial-gradient(circle at 40% 40%,rgba(255,255,255,.10),transparent 68%)}
+.wm{position:absolute;right:14px;bottom:-14px;font-weight:900;font-size:3.1em;
+  line-height:1;letter-spacing:.01em;color:#3d1f3a;opacity:.07;
+  white-space:nowrap;pointer-events:none;font-family:inherit}
+.mh-row{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
+.mh-row img.logo{width:64px;height:64px;border-radius:16px;background:#fff;
+  padding:7px;box-shadow:0 4px 14px rgba(0,0,0,.20);flex-shrink:0}
+.mh-row .tick{flex:1;min-width:0}
+.mh-row .ttl{font-weight:800;font-size:1.35em;line-height:1.15;display:flex;
+  align-items:center;gap:8px;flex-wrap:wrap}
+.mh-row .sub{opacity:.9;font-size:.82em;margin-top:4px}
+.week-pill{margin-left:auto;flex-shrink:0;text-align:center;background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.30);border-radius:14px;padding:7px 11px;font-size:.72em;
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.week-pill b{display:block;font-size:1.55em;line-height:1}
+.mh-dots{display:flex;gap:7px;margin-top:16px;position:relative;z-index:1}
+.mh-dots i{width:10px;height:10px;border-radius:50%;background:#fecefb;
+  opacity:.5}
+.mh-dots i:first-child{background:#fff;opacity:.95;width:22px;border-radius:99px}
+/* ---------- masthead (การ์ดหัวบ้าน) ---------- */
+.bubble{background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:0 3px 14px rgba(16,24,40,.10)}
+.hd{display:flex;align-items:center;gap:10px;padding:13px 16px;color:#fff}
+.hd .plat{width:28px;height:28px;border-radius:8px;display:flex;flex-shrink:0;
+  align-items:center;justify-content:center}
+.hd .plat img{width:16px;height:16px;display:block}
+.hd .t{font-weight:800;flex:1;min-width:0;font-size:.98em}
+.hd .badge{font-size:.72em;font-weight:800;padding:4px 9px;border-radius:11px;
+  flex-shrink:0;white-space:nowrap}
+main{display:grid;gap:14px;margin-top:14px}
+.hero-bubble .hero-img{width:100%;aspect-ratio:20/13;object-fit:cover;display:block}
+.hero-bubble.no-pic .bd{padding-top:14px}
+.bd{padding:12px 16px 14px}
+.feat .fcap{font-size:.95em;font-weight:700;line-height:1.45}
+.feat .fmeta{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:8px;
+  font-size:.76em;color:#5c666f}
+.fban{font-size:.78em;font-weight:800;padding:3px 10px;border-radius:11px;margin-left:auto}
+.pc-open{color:#fea5f7;font-weight:700;text-decoration:none}
+/* ---------- cards grid: desktop 2 คอล ---------- */
+@media (min-width:640px){
+  main{grid-template-columns:repeat(2,1fr)}
+  .hero-bubble,.take-bubble,.posts-bubble{grid-column:1/-1}
+}
+/* ---------- stats แถว ---------- */
+.st{display:flex;gap:8px}
+.st .c{flex:1;min-width:0;text-align:left;background:#f7f9fb;border-radius:10px;
+  padding:9px 10px}
+.st .c .n{font-size:1.02em;font-weight:800;font-variant-numeric:tabular-nums}
+.st .c .n.v-up{color:#146c2e} .st .c .n.v-down{color:#b3261e}
+.st .c .l{font-size:.63em;color:#7b858f;margin-top:2px;white-space:nowrap}
+.mlabel{font-size:.7em;color:#7b858f;margin:8px 2px 0;font-weight:600}
+/* ---------- leaderboard ---------- */
+.lb{margin-top:8px}
+.lb-row{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:8px}
+.lb-row .rk{width:18px;font-size:.76em;color:#9aa3ab;font-weight:800;flex-shrink:0}
+.lb-row .nm{flex:1;min-width:0;font-size:.8em;color:#46505a;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.lb-row .star{color:#fea5f7;margin-left:4px}
+.lb-row .bar{flex:1;max-width:90px;height:5px;background:#eef1f5;border-radius:99px;
+  overflow:hidden}
+.lb-row .bar i{display:block;height:100%;border-radius:99px;
+  background:linear-gradient(90deg,#fea5f7,#fecefb)}
+.lb-row .vl{font-size:.78em;font-weight:700;color:#46505a;flex-shrink:0;
+  font-variant-numeric:tabular-nums}
+.lb-row.us{background:#fff6fe;font-weight:800}
+.lb-row.us .nm{color:#1f2328}
+.warn{background:#fdf3d7;border:1px solid #e8d089;color:#6b4e00;border-radius:8px;
+  padding:8px 10px;font-size:.74em;margin-top:10px}
+/* ---------- takeaway ---------- */
+.take{background:#f5f7f9;border-radius:10px;padding:12px 14px}
+.take-l{font-size:.82em;color:#3d4750;line-height:1.6;margin-top:6px}
+.take-l:first-child{font-weight:800;color:#fea5f7;margin-top:0}
+/* ---------- โพสต์ ---------- */
+.pc{display:flex;align-items:center;gap:10px;padding:10px 0;text-decoration:none;
+  color:inherit;border-bottom:1px solid #eef1f5}
+.pc:last-child{border-bottom:none}
+.pc .rk{width:16px;font-size:.8em;font-weight:800;color:#c8ced5;flex-shrink:0}
+.pc .plat-mini{width:30px;height:30px;border-radius:9px;display:flex;flex-shrink:0;
+  align-items:center;justify-content:center}
+.pc .plat-mini img{width:16px;height:16px}
+.pc .body{flex:1;min-width:0}
+.pc .cap{font-size:.86em;font-weight:600;color:#262b31;display:-webkit-box;
+  -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
+.pc .mt{font-size:.7em;color:#7b858f;margin-top:3px;display:block}
+.pc .eng{font-size:.86em;font-weight:800;color:#fea5f7;flex-shrink:0}
+.pc:hover .cap{text-decoration:underline}
+/* ---------- nav ---------- */
+nav{display:flex;gap:8px;margin:16px 0 2px;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;padding:2px}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;text-decoration:none;font-size:.78em;font-weight:700;padding:8px 14px;
+  border-radius:999px;background:#fff;color:#46505a;border:1px solid #d6dbe1;
+  box-shadow:0 2px 6px rgba(16,24,40,.06)}
+nav a.cur{background:#fea5f7;color:#3d1f3a;border-color:transparent;
+  box-shadow:0 3px 10px #ffd6fb}
+footer{text-align:center;color:#8a939d;font-size:.75em;margin-top:26px}
+footer a{color:#46505a}
+</style></head><body>
+<div class="page">
+  <div class="masthead">
+    <span class="wm">SPORT</span>
+    <div class="mh-row">
+      <img class="logo" src="https://tsd-pengpis.github.io/digital-report/logos/sport.png" alt="">
+      <div class="tick">
+        <div class="ttl">THE STANDARD SPORT</div>
+        <div class="sub">รายงานดิจิทัลประจำสัปดาห์ · 12-18 ส.ค. 2026</div>
+      </div>
+      <div class="week-pill"><b>2026-W35</b>อัปเดต<br>ทุกสัปดาห์</div>
+    </div>
+    <div class="mh-dots">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+  <nav><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/news.html">NEWS</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/wealth.html">WEALTH</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/pop.html">POP</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/life.html">LIFE</a><a class="cur" href="https://tsd-pengpis.github.io/digital-report/2026-W35/sport.html">SPORT</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/knd.html">KND</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/tss.html">SECRET SAUCE</a><a class="" href="https://tsd-pengpis.github.io/digital-report/2026-W35/podcast.html">PODCAST</a></nav>
+  <main>
+    
+<div class="bubble hero-bubble">
+  <div class="hd" style="background:linear-gradient(135deg,#fea5f7 0%,#febcf9 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+    <span class="t">คอนเทนต์เด่นประจำสัปดาห์</span>
+    <span class="badge" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">#1 ของบ้าน</span>
+  </div>
+  <img class="hero-img" src="https://tsd-pengpis.github.io/digital-report/2026-W35/img/sport.jpg" alt="">
+  <div class="bd">
+    <div class="feat">
+      <div class="fcap">เบ็คกี้-รีเบคก้า และ เจนิส-เจณิสตา ร่วมท้าทายศึก HYROX Bangkok 2026 . เบ็คกี้-รีเบคก้า และ เจนิส-เจณิสตา ร่วมท…</div>
+      <div class="fmeta">Instagram · 8/15/26, 8:47 PM · <a class="pc-open" href="https://www.instagram.com/p/DcEB4K5DyFl/" target="_blank">เปิด →</a>
+        <span class="fban" style="background:#fff3fe;color:#fea5f7">
+          30,906 engagement</span></div>
+    </div>
+  </div>
+</div>
+    
+<div class="bubble take-bubble">
+  <div class="bd">
+    <div class="take">
+      <div class="take-l">อ่านเร็วสำหรับทีม · สัปดาห์ 2026-W35</div>
+      <div class="take-l">• แพลตฟอร์มที่แรงที่สุด: Instagram อันดับ 2/6 ของลีก</div><div class="take-l">• ผู้ติดตามโตสุด: Instagram +3,830 สัปดาห์นี้</div>
+    </div>
+  </div>
+</div>
+    
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#1877F2 0%,#5299f5 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/facebook_white.png" alt=""></span>
+    <span class="t">Facebook</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">5/6 ในลีก</span>
+  </div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">154,137</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">66</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +1,644</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#fea5f7">452</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">Engagement เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">ขอบสนาม</span><div class="bar"><i style="width:100%"></i></div><span class="vl">6,134</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Thairath Sport - ไทยรัฐสปอร์ต</span><div class="bar"><i style="width:40%"></i></div><span class="vl">2,465</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Siamsport</span><div class="bar"><i style="width:38%"></i></div><span class="vl">2,311</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">Main Stand</span><div class="bar"><i style="width:26%"></i></div><span class="vl">1,566</span></div><div class="lb-row us"><span class="rk">5</span><span class="nm">THE STANDARD SPORT<span class="star">★</span></span><div class="bar"><i style="width:7%"></i></div><span class="vl">452</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">Think Curve - คิดไซด์โค้ง</span><div class="bar"><i style="width:7%"></i></div><span class="vl">440</span></div></div>
+    
+  </div>
+</div>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+    <span class="t">Instagram</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">2/6 ในลีก</span>
+  </div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">73,672</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">66</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +3,830</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#fea5f7">3.3K</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">Engagement เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">Main Stand</span><div class="bar"><i style="width:100%"></i></div><span class="vl">6,917</span></div><div class="lb-row us"><span class="rk">2</span><span class="nm">THE STANDARD SPORT<span class="star">★</span></span><div class="bar"><i style="width:48%"></i></div><span class="vl">3,328</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Thairath Sport - ไทยรัฐ สปอร์ต</span><div class="bar"><i style="width:34%"></i></div><span class="vl">2,345</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">SIAMSPORT</span><div class="bar"><i style="width:29%"></i></div><span class="vl">2,010</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">Soul4Street</span><div class="bar"><i style="width:4%"></i></div><span class="vl">287</span></div><div class="lb-row"><span class="rk">6</span><span class="nm">Montri Boon</span><div class="bar"><i style="width:2%"></i></div><span class="vl">171</span></div></div>
+    
+  </div>
+</div>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#16181c 0%,#505255 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/tiktok_white.png" alt=""></span>
+    <span class="t">TikTok</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">4/5 ในลีก</span>
+  </div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">51,100</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">17</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ ~+500</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#fea5f7">1.1K</div><div class="l">RCS/โพสต์</div></div>
+    </div>
+    <div class="mlabel">Engagement เฉลี่ยต่อโพสต์</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">MAIN STAND</span><div class="bar"><i style="width:100%"></i></div><span class="vl">8,488</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">ขอบสนาม</span><div class="bar"><i style="width:40%"></i></div><span class="vl">3,413</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">thairath_sport</span><div class="bar"><i style="width:24%"></i></div><span class="vl">2,041</span></div><div class="lb-row us"><span class="rk">4</span><span class="nm">THE STANDARD SPORT<span class="star">★</span></span><div class="bar"><i style="width:13%"></i></div><span class="vl">1,103</span></div><div class="lb-row"><span class="rk">5</span><span class="nm">ThinkCurve - คิดไซด์โค้ง</span><div class="bar"><i style="width:2%"></i></div><span class="vl">134</span></div></div>
+    <div class="warn">⏭️ ข้าม 1 เพจที่ไม่ได้โพสต์</div>
+  </div>
+</div>
+<div class="bubble plat-card">
+  <div class="hd" style="background:linear-gradient(135deg,#c4302b 0%,#d36460 100%)">
+    <span class="plat" style="background:rgba(255,255,255,.18)">
+      <img src="https://tsd-pengpis.github.io/digital-report/icons/youtube_white.png" alt=""></span>
+    <span class="t">YouTube</span>
+    <span class="badge" style="background:rgba(0,0,0,.22)">5/5 ในลีก</span>
+  </div>
+  <div class="bd">
+    <div class="st">
+      <div class="c"><div class="n">19,400</div><div class="l">ผู้ติดตาม</div></div>
+      <div class="c"><div class="n">16</div><div class="l">โพสต์</div></div>
+      <div class="c"><div class="n v-up">▲ +174</div><div class="l">ติดตาม/สัปดาห์</div></div>
+      <div class="c"><div class="n" style="color:#fea5f7">220</div><div class="l">คนดูเฉลี่ย/คลิป</div></div>
+    </div>
+    <div class="mlabel">คนดูเฉลี่ยต่อคลิป</div>
+    <div class="lb"><div class="lb-row"><span class="rk">1</span><span class="nm">Siamsport</span><div class="bar"><i style="width:100%"></i></div><span class="vl">91,393</span></div><div class="lb-row"><span class="rk">2</span><span class="nm">Main Stand Thailand</span><div class="bar"><i style="width:44%"></i></div><span class="vl">40,012</span></div><div class="lb-row"><span class="rk">3</span><span class="nm">Thairath Sport</span><div class="bar"><i style="width:29%"></i></div><span class="vl">26,875</span></div><div class="lb-row"><span class="rk">4</span><span class="nm">ขอบสนาม [Official]</span><div class="bar"><i style="width:25%"></i></div><span class="vl">22,482</span></div><div class="lb-row us"><span class="rk">5</span><span class="nm">THE STANDARD SPORT<span class="star">★</span></span><div class="bar"><i style="width:0%"></i></div><span class="vl">220</span></div></div>
+    <div class="warn">⏭️ ข้าม 1 เพจที่ไม่ได้โพสต์</div>
+  </div>
+</div>
+    
+<div class="bubble posts-bubble">
+  <div class="hd" style="background:linear-gradient(135deg,#fea5f7 0%,#feb7f9 100%)">
+    <span class="t">คอนเทนต์เด่น SPORT สัปดาห์นี้</span>
+    <span class="badge" style="background:rgba(255,255,255,.2)">Top 5</span>
+  </div>
+  <div class="bd">
+<a class="pc" href="https://www.instagram.com/p/DcEB4K5DyFl/" target="_blank"><span class="rk">1</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">เบ็คกี้-รีเบคก้า และ เจนิส-เจณิสตา ร่วมท้าทายศึก HYROX Bangkok 2026 . เบ็คกี้-รีเบคก้า และ เจนิส-เจณ…</span>
+    <span class="mt">Instagram · 8/15/26, 8:47 PM</span></span>
+  <span class="eng">30,906</span></a>
+<a class="pc" href="https://www.instagram.com/p/DcBQDOhk-e0/" target="_blank"><span class="rk">2</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">ปันปัน-สุทัตตา @punpun_sutatta ทำเวลา 01:08.50 ชั่วโมง ในประเภทหญิงคู่ HYROX Bangkok 2026 . HYROX Ba…</span>
+    <span class="mt">Instagram · 8/14/26, 6:53 PM</span></span>
+  <span class="eng">24,474</span></a>
+<a class="pc" href="https://www.instagram.com/p/DcFvtOOExwW/" target="_blank"><span class="rk">3</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">“วันอาทิตย์ควรอยู่บ้าน” ท็อป-ทศพล กล่าวหลังพิชิต HYROX ด้วยเวลา 1:17:56 ชั่วโมง . ท็อป-ทศพล หมายสุข …</span>
+    <span class="mt">Instagram · 8/16/26, 12:46 PM</span></span>
+  <span class="eng">19,974</span></a>
+<a class="pc" href="https://www.instagram.com/p/DcFqWnXE4ls/" target="_blank"><span class="rk">4</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">จินวุค BUS จบ HYROX Bangkok 2026 ด้วยเวลา 1:23.06 ชั่วโมง . คิมจินวุค หรือ จินวุค แห่งวง BUS (Becaus…</span>
+    <span class="mt">Instagram · 8/16/26, 12:00 PM</span></span>
+  <span class="eng">19,021</span></a>
+<a class="pc" href="https://www.instagram.com/p/Db-bVPekxWg/" target="_blank"><span class="rk">5</span><span class="plat-mini" style="background:linear-gradient(135deg,#C13584 0%,#d068a3 100%)"><img src="https://tsd-pengpis.github.io/digital-report/icons/instagram_white.png" alt=""></span>
+  <span class="body"><span class="cap">ณเดชน์ ลุย HYROX Bangkok จบชายเดี่ยวด้วยเวลา 1:16:59 ชั่วโมง . หนึ่งในไฮไลต์วันแรกของ HYROX Bangkok …</span>
+    <span class="mt">Instagram · 8/13/26, 4:34 PM</span></span>
+  <span class="eng">17,490</span></a></div>
+</div>
+  </main>
+  <footer>ข้อมูล: <b style="color:#fea5f7">Fanpage Karma</b> · สร้างอัตโนมัติ ·
+  <a href="https://tsd-pengpis.github.io/digital-report/">TSD Digital Report ทุกบ้าน</a></footer>
+</div></body></html>
